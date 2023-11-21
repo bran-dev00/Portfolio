@@ -21,14 +21,19 @@ function App() {
         </div>
 
         <div>
-          <section>
+          <section className="p-5 ">
             <header>
               <h1 className="text-center text-4xl font-bold font-mono">
                 Projects
               </h1>
             </header>
 
-            <ProjectCard />
+            {/* Grid */}
+            <div></div>
+
+            <ProjectCard img={night} description={"Austronomy Project"} />
+            <ProjectCard img={night} description={"Austronomy Project"} />
+            <ProjectCard img={night} description={"Austronomy Project"} />
           </section>
         </div>
       </div>
