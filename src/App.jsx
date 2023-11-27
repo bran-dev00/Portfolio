@@ -3,6 +3,7 @@ import { Navbar } from "./Components/Navbar/Navbar";
 import night from "./assets/night.jpg";
 import Vaporwave from "./assets/Vaporwave.jpg";
 import { ProjectCard } from "./Components/ProjectCard";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   return (
@@ -21,21 +22,24 @@ function App() {
         </div>
 
         <div>
-          <section className="p-5 ">
+          <section className="py-5">
             <header>
-              <h1 className="text-center text-4xl font-bold font-mono">
-                Projects
-              </h1>
+              <h1 className="text-center text-xl font-bold">Projects</h1>
             </header>
 
             {/* Grid */}
-            <div></div>
-
-            <ProjectCard img={night} description={"Austronomy Project"} />
-            <ProjectCard img={night} description={"Austronomy Project"} />
-            <ProjectCard img={night} description={"Austronomy Project"} />
+            <div className="grid grid-cols-3 place-items-center py-3 gap-7">
+              <ProjectCard img={night} description={" Project"} />
+              <ProjectCard img={night} description={" Project"} />
+              <ProjectCard img={night} description={" Project"} />
+              <ProjectCard img={night} description={" Project"} />
+              <ProjectCard img={night} description={" Project"} />
+              <ProjectCard img={night} description={" Project"} />
+            </div>
           </section>
         </div>
+
+        <Footer />
       </div>
     </>
   );
