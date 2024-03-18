@@ -1,93 +1,40 @@
-import "./App.css";
 import { Navbar } from "./Components/Navbar/Navbar";
-import night from "./assets/night.jpg";
-
-import playBtn from "./assets/playBtn.svg";
-import pauseBtn from "./assets/pauseBtn.svg";
-import resetBtn from "./assets/resetBtn.svg";
-import stopBtn from "./assets/stopBtn.svg";
-
-import { ProjectCard } from "./Components/ProjectCard";
+import { useState } from "react";
+import HeroPicture from "./assets/HeroPicture.svg";
 import Footer from "./Components/Footer/Footer";
-import { CassetteTape } from "./Components/CassetteTape";
 
 function App() {
+  const [interestText, setInterestText] = useState("Audio Programming");
+
   return (
     <>
-      <div className=" font-mono min-h-screen bg-gradient-to-t from-[#2d1e44] to-blue-950">
+      <div className="min-h-screen bg-background text-text">
         <Navbar />
 
-        <div className="container mx-auto p-8">
-          <header className="text-center py-5 mb-8 border-2 border-white rounded-lg h-[500px] flex flex-col items-center ">
-            <h1 className="text-4xl font-bold text-white">
-              Hi There, Thanks for stopping by!
-            </h1>
-            <p className="text-white text-lg">
-              My name is Brandon, I&apos;m a recent computer science graduate
-              from{" "}
-              <span className="text-yellow-400 italic font-bold backdrop-blur-sm">
-                Iowa State University
-              </span>
-              .
+        <header className="flex justify-between items-center">
+          {/* Left Text */}
+          <div className="flex flex-col max-w-lg mx-auto p-8">
+            <p className="text-8xl font-[inria] mb-8 ">
+              Hi, there my name is Brandon
+            </p>
+            <p className="text-3xl">
+              I’m a Computer Science graduate from Iowa State University
             </p>
 
-            <p className="text-white text-lg">
-              I enjoy exploring and learning new things.
-              <br />
-              {/* <span>Some of my hobbies include but are not limited to: </span>
-              <ul>
-                <li>Music</li>
-                <li>Sports</li>
-                <li>Art</li>
-                <li>Coding</li>
-              </ul> */}
+            <p className="text-3xl mt-4">
+              I have an interest in <br />
+              Full-Stack Development and{" "}
+              <span className=" bg-red-600">{interestText}</span>
             </p>
+          </div>
 
-            <a href="#" className="my-4 ">
-              <CassetteTape />
-              <a href="#" className="text-white underline">
-                View Transcript
-              </a>
-            </a>
-
-            <div>
-              <button>
-                <img src={playBtn} alt="" />
-              </button>
-              <button>
-                <img src={pauseBtn} alt="" />
-              </button>
-              <button>
-                <img src={resetBtn} alt="" />
-              </button>
-              <button>
-                <img src={stopBtn} alt="" />
-              </button>
-            </div>
-          </header>
-        </div>
-
-        <div>
-          <section className="py-5">
-            <header>
-              <h1 className="text-center text-3xl font-bold text-white">
-                Projects
-              </h1>
-            </header>
-
-            {/* Grid */}
-            <div className="grid grid-cols-3 place-items-center py-3 gap-7">
-              <ProjectCard img={night} description={" Project"} />
-              <ProjectCard img={night} description={" Project"} />
-              <ProjectCard img={night} description={" Project"} />
-              <ProjectCard img={night} description={" Project"} />
-              <ProjectCard img={night} description={" Project"} />
-              <ProjectCard img={night} description={" Project"} />
-            </div>
-          </section>
-        </div>
-
-        <Footer />
+          {/* Right Image */}
+          <img
+            src={HeroPicture}
+            alt="graduation picture"
+            className="h-auto max-h-96 md:max-h-full mx-auto pt-10 "
+          />
+        </header>
       </div>
     </>
   );

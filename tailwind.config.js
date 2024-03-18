@@ -4,8 +4,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#164863",
-        secondary: "#427D9D",
+        text: "#ebf6f0",
+        darkText: "#050A30",
+        background: "#11222F",
+        primary: "#95e9b8",
+        secondary: "#1b2720",
+        accent: "#49F67A",
+      },
+      fontFamily: {
+        inria: ["inria", "serif"],
       },
       backgroundImage: {
         "hero-pattern":
