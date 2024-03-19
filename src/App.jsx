@@ -12,22 +12,24 @@ function App() {
       <div className="min-h-screen bg-background text-text relative">
         <Navbar />
         <Socials />
-        <header className="">
+        <header>
           <div className="container flex mx-auto items-center mt-18 gap-x-96">
             {/* Left Text */}
-            <div className="flex flex-col max-w-lg mx-auto p-8 ">
-              <h1 className="text-8xl font-[inria] mb-8 ">
+            <div className="flex flex-col max-w-[800px] mx-auto p-8 ">
+              <h1 className="text-8xl w-[600px] font-[inria] mb-8 ">
                 Hi there, my name is Brandon
               </h1>
 
-              <h2 className="text-3xl">
+              <h2 className="text-4xl">
                 I’m a Computer Science graduate from Iowa State University
               </h2>
 
-              <h3 className="text-3xl mt-4">
+              <h3 className="text-4xl mt-4">
                 I have an interest in <br />
                 Full-Stack Development and{" "}
-                <span className=" bg-red-600">{interestText}</span>
+                <span className=" block mt-5 text-center p-4 bg-red-600">
+                  {interestText}
+                </span>
               </h3>
             </div>
 
