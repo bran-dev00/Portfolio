@@ -1,6 +1,6 @@
 import { Navbar } from "./Components/Navbar/Navbar";
 import { useState } from "react";
-import HeroPicture from "./assets/HeroPicture.svg";
+import HeroPicture from "./assets/heroImg.png";
 import Footer from "./Components/Footer/Footer";
 import { Socials } from "./Components/socials";
 
@@ -27,7 +27,7 @@ function App() {
               <h3 className="text-4xl mt-4">
                 I have an interest in <br />
                 Full-Stack Development and{" "}
-                <span className=" block mt-5 text-center p-4 bg-red-600">
+                <span className=" font-bold block mt-5 text-center rounded-md p-4 bg-red-600">
                   {interestText}
                 </span>
               </h3>
