@@ -1,6 +1,6 @@
 import { Navbar } from "./Components/Navbar/Navbar";
 import { useState } from "react";
-import HeroPicture from "./assets/heroImg.png";
+import HeroPicture from "./assets/HoneyComb.png";
 import Footer from "./Components/Footer/Footer";
 import { Socials } from "./Components/socials";
 
