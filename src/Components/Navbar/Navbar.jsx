@@ -3,7 +3,7 @@ import logo from "../../assets/terminalLogo.svg";
 export const Navbar = () => {
   return (
     <>
-      <nav className="text-white flex items-center text-2xl m-5">
+      <nav className="text-white flex items-center text-2xl p-5 ">
         <div className="mr-auto flex flex-col justify-center items-center relative after:bg-accent after:absolute after:w-40 after:h-2 after:top-24 after:left-0">
           <a href="#">
             <img src={logo} alt="letter B logo" className="h-20" />

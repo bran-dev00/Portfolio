@@ -1,18 +1,7 @@
-import React from "react";
-
-export const ProjectCard = ({ description, img }) => {
+export const ProjectCard = () => {
   return (
-    <div className="group relative w-[400px] h-60">
-      <img className="w-full h-60 rounded-md" src={img} alt="" />
-
-      {/* Overlay */}
-      <div className=" flex flex-col items-center justify-center absolute inset-0 bg-[#141c3a] opacity-0 w-[400px] h-60 rounded-md group-hover:opacity-100 ease-linear transition-opacity">
-        <p className="text-white inline-block">{description}</p>
-
-        <button className="bg-emerald-500 rounded-md p-3 my-3 text-sm text-white ">
-          More Details
-        </button>
-      </div>
-    </div>
+    <>
+      <p>Test</p>
+    </>
   );
 };
