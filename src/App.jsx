@@ -5,18 +5,17 @@ import Vaporwave from "./assets/Vaporwave.jpg";
 import Footer from "./Components/Footer/Footer";
 import { Socials } from "./Components/socials";
 import ProjectCard from "./Components/Projects/ProjectCard";
+import { SmallProjectCard } from "./Components/Projects/SmallProjectCard";
 
 function App() {
   const [interestText, setInterestText] = useState("Audio Programming");
 
   // Test:
   const project = {
-    title: "Project #1",
-    skills: ["React", "JavaScript", "HTML", "CSS"],
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    screenshot: Vaporwave,
-    sourceLink: "https://github.com/m00se01/Portfolio",
+    cardImage:
+      "https://img.freepik.com/free-photo/portrait-adorable-cavapoo-dog-holding-tennis-ball-park-sunny-day_181624-59516.jpg?t=st=1713199924~exp=1713203524~hmac=0c3853ead18e9ca1a3940aefb912055fbaf70a500f6976c79b18588d4e3d7801&w=1380",
+    altDescription: "placeholder",
+    cardDescription: "Title of project",
   };
 
   return (
@@ -57,12 +56,39 @@ function App() {
           <div className="bg-accent rounded-sm animate-bounce ease-in-out bg-center absolute bottom-[-50px] left-[45%] w-60 h-4 mb-5"></div>
         </header>
 
-        <section className="container flex flex-col justify-center items-center mx-auto text-white text-lg font-inria">
-          <h1 className="text-center text-6xl p-10">Projects</h1>
+        <section className="container mx-auto text-white text-lg font-inria">
+          <h1 className="text-left text-6xl p-10">Projects</h1>
 
           {/* Project Grid */}
 
-          <div>
+          <div className="grid grid-cols-3 gap-4 my-5">
+            <SmallProjectCard
+              cardImage={project.cardImage}
+              cardDescription={project.cardDescription}
+            />
+            <SmallProjectCard
+              cardImage={project.cardImage}
+              cardDescription={project.cardDescription}
+            />
+            <SmallProjectCard
+              cardImage={project.cardImage}
+              cardDescription={project.cardDescription}
+            />
+            <SmallProjectCard
+              cardImage={project.cardImage}
+              cardDescription={project.cardDescription}
+            />
+            <SmallProjectCard
+              cardImage={project.cardImage}
+              cardDescription={project.cardDescription}
+            />
+            <SmallProjectCard
+              cardImage={project.cardImage}
+              cardDescription={project.cardDescription}
+            />
+          </div>
+
+          {/* <div>
             <ProjectCard
               title={project.title}
               skills={project.skills}
@@ -76,7 +102,7 @@ function App() {
               description={project.description}
               screenshot={project.screenshot}
             />
-          </div>
+          </div> */}
         </section>
         <Footer />
       </div>
