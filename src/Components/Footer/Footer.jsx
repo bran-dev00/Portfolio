@@ -8,7 +8,7 @@ import {
 const Footer = () => {
   return (
     <div>
-      <footer className="text-white text-center border-t-2 border-dashed">
+      <footer className="bg-slate-900 flex justify-center h-60">
         <div>
           <ul>
             <li className="my-3">
@@ -41,7 +41,7 @@ const Footer = () => {
             </li>
           </ul>
 
-          <span className="text-sm "> Brandon &copy; 2023</span>
+          <span className="text-sm "> Brandon &copy; 2024</span>
         </div>
       </footer>
     </div>

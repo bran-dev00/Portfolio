@@ -14,6 +14,7 @@ const ProjectCard = ({
           <p>{description}</p>
         </div>
 
+        {/* TODO: Image-Slider */}
         <div className="flex flex-col justify-center items-center">
           <img
             className=" max-w-md h-[400px] rounded-lg"

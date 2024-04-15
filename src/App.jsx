@@ -26,7 +26,7 @@ function App() {
         <Socials />
 
         <header className="relative">
-          <div className="container flex mx-auto items-center mt-16 mb-12 gap-x-96">
+          <div className="container flex mx-auto items-center mt-16 mb-12 gap-x-96 font-inria">
             {/* Left Text */}
             <div className="flex flex-col max-w-[800px] mx-auto p-8 ">
               <h1 className="text-8xl w-[600px] font-[inria] mb-8 ">
@@ -40,7 +40,7 @@ function App() {
               <h3 className="text-4xl mt-4">
                 I have an interest in <br />
                 Full-Stack Development and{" "}
-                <span className=" font-bold block mt-5 text-center rounded-md p-4 bg-red-600">
+                <span className=" font-bold block mt-5 text-center rounded-md p-4 bg-accent text-black">
                   {interestText}
                 </span>
               </h3>
@@ -57,8 +57,10 @@ function App() {
           <div className="bg-accent rounded-sm animate-bounce ease-in-out bg-center absolute bottom-[-50px] left-[45%] w-60 h-4 mb-5"></div>
         </header>
 
-        <section className="container flex flex-col justify-center items-center mx-auto text-white text-lg ">
-          <h1 className="text-center text-6xl p-5">Projects</h1>
+        <section className="container flex flex-col justify-center items-center mx-auto text-white text-lg font-inria">
+          <h1 className="text-center text-6xl p-10">Projects</h1>
+
+          {/* Project Grid */}
 
           <div>
             <ProjectCard
@@ -76,6 +78,7 @@ function App() {
             />
           </div>
         </section>
+        <Footer />
       </div>
     </>
   );

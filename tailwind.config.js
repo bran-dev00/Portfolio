@@ -13,6 +13,7 @@ export default {
       },
       fontFamily: {
         inria: ["inria", "serif"],
+        poppins: ["Poppins", "Sans-Serif"],
       },
       backgroundImage: {
         "hero-pattern":
