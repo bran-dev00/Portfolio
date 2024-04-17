@@ -6,6 +6,7 @@ import Footer from "./Components/Footer/Footer";
 import { Socials } from "./Components/socials";
 import ProjectCard from "./Components/Projects/ProjectCard";
 import { SmallProjectCard } from "./Components/Projects/SmallProjectCard";
+import { CassetteTape } from "./Components/CassetteTape";
 
 function App() {
   const [interestText, setInterestText] = useState("Audio Programming");
@@ -87,23 +88,23 @@ function App() {
               cardDescription={project.cardDescription}
             />
           </div>
-
-          {/* <div>
-            <ProjectCard
-              title={project.title}
-              skills={project.skills}
-              description={project.description}
-              screenshot={project.screenshot}
-              linkToProject={project.sourceLink}
-            />
-            <ProjectCard
-              title={project.title}
-              skills={project.skills}
-              description={project.description}
-              screenshot={project.screenshot}
-            />
-          </div> */}
         </section>
+
+        {/* About Section */}
+        <section className="container mx-auto text-white text-lg font-inria flex flex-col justify-center items-center">
+          <h1 className="text-left text-6xl p-10">About Me</h1>
+
+          {/* Image */}
+
+          <CassetteTape />
+
+          <img
+            className={"aspect-square w-[400px] "}
+            src={project.cardImage}
+            alt=""
+          />
+        </section>
+
         <Footer />
       </div>
     </>

@@ -1,26 +1,26 @@
 <svg width="308" height="215" viewBox="0 0 308 215" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="Cassette Tape" filter="url(#filter0_d_46_164)">
+<g id="Cassette Tape" filter="url(#filter0_d_654_500)">
 <g id="Cassette Case">
-<mask id="path-1-inside-1_46_164" fill="white">
+<mask id="path-1-inside-1_654_500" fill="white">
 <rect x="10" y="6" width="288" height="195" rx="11"/>
 </mask>
-<rect x="10" y="6" width="288" height="195" rx="11" fill="#CF5858" stroke="#215A84" stroke-width="86" mask="url(#path-1-inside-1_46_164)"/>
+<rect x="10" y="6" width="288" height="195" rx="11" fill="#CF5858" stroke="#215A84" stroke-width="86" mask="url(#path-1-inside-1_654_500)"/>
 </g>
 <g id="Cassette Tape_2">
-<mask id="path-2-inside-2_46_164" fill="white">
+<mask id="path-2-inside-2_654_500" fill="white">
 <rect x="10" y="13" width="288" height="180" rx="11"/>
 </mask>
-<rect x="10" y="13" width="288" height="180" rx="11" fill="#071D54" stroke="#071D54" stroke-width="86" mask="url(#path-2-inside-2_46_164)"/>
+<rect x="10" y="13" width="288" height="180" rx="11" fill="#071D54" stroke="#071D54" stroke-width="86" mask="url(#path-2-inside-2_654_500)"/>
 </g>
 <g id="Screws">
 <g id="Screw">
-<circle id="Ellipse 1" cx="20" cy="22" r="4.5" fill="#9D9D9D" stroke="#787878"/>
+<circle id="Ellipse 1" cx="20" cy="22" r="4.5" fill="#2300FB" stroke="#131178"/>
 <g id="cross">
 <rect id="Rectangle 10" x="18.1818" y="21.6364" width="3.63636" height="0.727273" fill="#071D54"/>
 <rect id="Rectangle 11" x="19.6364" y="23.8182" width="3.63636" height="0.727273" transform="rotate(-90 19.6364 23.8182)" fill="#071D54"/>
 </g>
 <g id="Screw_2">
-<circle id="Ellipse 1_2" cx="20" cy="22" r="4.5" fill="#5C5A5A" fill-opacity="0.76" stroke="#353535"/>
+<circle id="Ellipse 1_2" cx="20" cy="22" r="4.5" fill="white" fill-opacity="0.76" stroke="#071D54"/>
 <g id="cross_2">
 <rect id="Rectangle 10_2" x="18.1818" y="21.6364" width="3.63636" height="0.727273" fill="#071D54"/>
 <rect id="Rectangle 11_2" x="19.6364" y="23.8182" width="3.63636" height="0.727273" transform="rotate(-90 19.6364 23.8182)" fill="#071D54"/>
@@ -28,13 +28,13 @@
 </g>
 </g>
 <g id="Screw_3">
-<circle id="Ellipse 1_3" cx="17" cy="190" r="4.5" fill="#9D9D9D" stroke="#787878"/>
+<circle id="Ellipse 1_3" cx="17" cy="190" r="4.5" fill="#2300FB" stroke="#131178"/>
 <g id="cross_3">
 <rect id="Rectangle 10_3" x="15.1818" y="189.636" width="3.63636" height="0.727273" fill="#071D54"/>
 <rect id="Rectangle 11_3" x="16.6364" y="191.818" width="3.63636" height="0.727273" transform="rotate(-90 16.6364 191.818)" fill="#071D54"/>
 </g>
 <g id="Screw_4">
-<circle id="Ellipse 1_4" cx="17" cy="190" r="4.5" fill="#5C5A5A" fill-opacity="0.76" stroke="#353535"/>
+<circle id="Ellipse 1_4" cx="17" cy="190" r="4.5" fill="white" fill-opacity="0.76" stroke="#071D54"/>
 <g id="cross_4">
 <rect id="Rectangle 10_4" x="15.1818" y="189.636" width="3.63636" height="0.727273" fill="#071D54"/>
 <rect id="Rectangle 11_4" x="16.6364" y="191.818" width="3.63636" height="0.727273" transform="rotate(-90 16.6364 191.818)" fill="#071D54"/>
@@ -42,13 +42,13 @@
 </g>
 </g>
 <g id="Screw_5">
-<circle id="Ellipse 1_5" cx="287" cy="190" r="4.5" fill="#9D9D9D" stroke="#787878"/>
+<circle id="Ellipse 1_5" cx="287" cy="190" r="4.5" fill="#2300FB" stroke="#131178"/>
 <g id="cross_5">
 <rect id="Rectangle 10_5" x="285.182" y="189.636" width="3.63636" height="0.727273" fill="#071D54"/>
 <rect id="Rectangle 11_5" x="286.636" y="191.818" width="3.63636" height="0.727273" transform="rotate(-90 286.636 191.818)" fill="#071D54"/>
 </g>
 <g id="Screw_6">
-<circle id="Ellipse 1_6" cx="287" cy="190" r="4.5" fill="#5C5A5A" fill-opacity="0.76" stroke="#353535"/>
+<circle id="Ellipse 1_6" cx="287" cy="190" r="4.5" fill="white" fill-opacity="0.76" stroke="#071D54"/>
 <g id="cross_6">
 <rect id="Rectangle 10_6" x="285.182" y="189.636" width="3.63636" height="0.727273" fill="#071D54"/>
 <rect id="Rectangle 11_6" x="286.636" y="191.818" width="3.63636" height="0.727273" transform="rotate(-90 286.636 191.818)" fill="#071D54"/>
@@ -56,64 +56,57 @@
 </g>
 </g>
 <g id="Screw_7">
-<circle id="Ellipse 1_7" cx="287" cy="22" r="4.5" fill="#5C5A5A" fill-opacity="0.76" stroke="#353535"/>
+<circle id="Ellipse 1_7" cx="287" cy="22" r="4.5" fill="white" fill-opacity="0.76" stroke="#071D54"/>
 <g id="cross_7">
 <rect id="Rectangle 10_7" x="285.182" y="21.6364" width="3.63636" height="0.727273" fill="#071D54"/>
 <rect id="Rectangle 11_7" x="286.636" y="23.8182" width="3.63636" height="0.727273" transform="rotate(-90 286.636 23.8182)" fill="#071D54"/>
 </g>
 </g>
 </g>
-<g id="Labels" filter="url(#filter1_d_46_164)">
+<g id="Labels" filter="url(#filter1_d_654_500)">
 <path d="M24 43C24 37.4771 28.4772 33 34 33H273C278.523 33 283 37.4772 283 43V143H24V43Z" fill="#9DF3FF"/>
 </g>
-<g id="Spools">
-<g id="Spool">
-<circle id="OuterSpool" cx="214" cy="87" r="29" fill="#071D54"/>
-<g id="InnerSpool">
-<circle id="Spool_2" cx="214.133" cy="87.6752" r="19.8" transform="rotate(-42 214.133 87.6752)" fill="white" stroke="white"/>
-<circle id="Spool_3" cx="214.133" cy="87.6752" r="20.3" transform="rotate(-42 214.133 87.6752)" fill="white"/>
-<path id="Rectangle 1" d="M222.929 100.882L226.797 97.3986L233.763 105.135L229.895 108.618L222.929 100.882Z" fill="#071D54"/>
-<path id="Rectangle 5" d="M211.008 103.541L216.206 103.814L215.661 114.21L210.463 113.937L211.008 103.541Z" fill="#071D54"/>
-<path id="Rectangle 7" d="M198.85 84.2492L197.679 89.3209L187.535 86.9791L188.706 81.9074L198.85 84.2492Z" fill="#071D54"/>
-<path id="Rectangle 8" d="M217.961 71.0585L212.795 71.6929L211.526 61.3602L216.693 60.7259L217.961 71.0585Z" fill="#071D54"/>
-<path id="Rectangle 6" d="M230.295 91.1283L230.567 85.9303L240.963 86.4752L240.691 91.6732L230.295 91.1283Z" fill="#071D54"/>
-<path id="Rectangle 2" d="M195.495 70.4126L199.363 66.9297L206.329 74.6661L202.46 78.149L195.495 70.4126Z" fill="#071D54"/>
-<rect id="Rectangle 3" x="196.606" y="106.02" width="5.20512" height="10.4102" transform="rotate(-132 196.606 106.02)" fill="#071D54"/>
-<rect id="Rectangle 4" x="227.075" y="78.5856" width="5.20512" height="10.4102" transform="rotate(-132 227.075 78.5856)" fill="#071D54"/>
+<rect id="tension on spool" x="66.0001" y="58.9995" width="177" height="56" rx="28" stroke="#071D54" stroke-width="2"/>
+<g id="Spool 1">
+<path d="M122.96 88.5175C122.122 104.512 108.476 116.798 92.482 115.96C76.4877 115.122 64.2013 101.476 65.0395 85.482C65.8778 69.4877 79.5232 57.2012 95.5175 58.0395C111.512 58.8777 123.798 72.5232 122.96 88.5175Z" fill="#071D54"/>
+<path d="M109.873 74.9057C116.929 83.6186 115.585 96.4014 106.872 103.457C98.1595 110.512 85.3767 109.169 78.3212 100.456C71.2656 91.7432 72.6091 78.9604 81.322 71.9048C90.0349 64.8493 102.818 66.1928 109.873 74.9057Z" fill="white"/>
+<path d="M102.19 101.329L106.235 98.0538L112.787 106.144L108.741 109.42L102.19 101.329Z" fill="#071D54"/>
+<path d="M90.1463 103.362L95.3229 103.906L94.2347 114.259L89.0581 113.715L90.1463 103.362Z" fill="#071D54"/>
+<path d="M79.0143 83.4597L77.5796 88.4632L67.5726 85.5938L69.0074 80.5903L79.0143 83.4597Z" fill="#071D54"/>
+<path d="M98.79 71.2874L93.5976 71.6504L92.8714 61.2656L98.0638 60.9025L98.79 71.2874Z" fill="#071D54"/>
+<path d="M110.056 91.9751L110.6 86.7985L120.953 87.8867L120.409 93.0633L110.056 91.9751Z" fill="#071D54"/>
+<path d="M76.388 69.4665L80.4331 66.1908L86.9845 74.2811L82.9394 77.5568L76.388 69.4665Z" fill="#071D54"/>
+<path d="M75.6344 105.083L72.3587 101.038L80.449 94.4867L83.7246 98.5318L75.6344 105.083Z" fill="#071D54"/>
+<path d="M107.497 79.2811L104.222 75.236L112.312 68.6846L115.588 72.7297L107.497 79.2811Z" fill="#071D54"/>
 </g>
-</g>
-<g id="Spool_4">
-<circle id="OuterSpool_2" cx="94" cy="87" r="29" fill="#071D54"/>
-<g id="InnerSpool_2">
-<circle id="Spool_5" cx="94.1329" cy="87.6752" r="20.3" transform="rotate(-42 94.1329 87.6752)" fill="white"/>
-<path id="Rectangle 1_2" d="M102.929 100.882L106.797 97.3986L113.763 105.135L109.895 108.618L102.929 100.882Z" fill="#071D54"/>
-<path id="Rectangle 5_2" d="M91.0081 103.541L96.2061 103.814L95.6612 114.21L90.4632 113.937L91.0081 103.541Z" fill="#071D54"/>
-<path id="Rectangle 7_2" d="M78.8498 84.2492L77.6789 89.3209L67.5355 86.9791L68.7064 81.9074L78.8498 84.2492Z" fill="#071D54"/>
-<path id="Rectangle 8_2" d="M97.9614 71.0585L92.795 71.6929L91.5263 61.3602L96.6927 60.7259L97.9614 71.0585Z" fill="#071D54"/>
-<path id="Rectangle 6_2" d="M110.295 91.1283L110.567 85.9303L120.963 86.4751L120.691 91.6731L110.295 91.1283Z" fill="#071D54"/>
-<path id="Rectangle 2_2" d="M75.4947 70.4126L79.3629 66.9297L86.3287 74.666L82.4605 78.1489L75.4947 70.4126Z" fill="#071D54"/>
-<rect id="Rectangle 3_2" x="76.6062" y="106.02" width="5.20512" height="10.4102" transform="rotate(-132 76.6062 106.02)" fill="#071D54"/>
-<rect id="Rectangle 4_2" x="107.075" y="78.5856" width="5.20512" height="10.4102" transform="rotate(-132 107.075 78.5856)" fill="#071D54"/>
-</g>
-</g>
-<rect id="tension on spool" x="66" y="59" width="177" height="56" rx="28" stroke="#071D54" stroke-width="2"/>
+<g id="Spool 2">
+<path d="M241.733 78.5213C246.416 93.8377 237.795 110.05 222.479 114.733C207.162 119.416 190.95 110.795 186.267 95.4788C181.584 80.1624 190.205 63.9499 205.521 59.2672C220.838 54.5845 237.05 63.2049 241.733 78.5213Z" fill="#071D54"/>
+<path d="M224.78 70.2063C234.39 75.9806 237.499 88.4521 231.725 98.0621C225.951 107.672 213.479 110.782 203.869 105.007C194.259 99.233 191.15 86.7616 196.924 77.1515C202.698 67.5415 215.17 64.432 224.78 70.2063Z" fill="white"/>
+<path d="M226.597 97.6644L229.278 93.2027L238.202 98.5644L235.521 103.026L226.597 97.6644Z" fill="#071D54"/>
+<path d="M215.975 103.693L221.026 102.434L223.544 112.535L218.493 113.794L215.975 103.693Z" fill="#071D54"/>
+<path d="M198.708 88.7989L199.071 93.9913L188.686 94.7175L188.323 89.525L198.708 88.7989Z" fill="#071D54"/>
+<path d="M213.127 70.5969L208.372 72.714L204.138 63.2038L208.893 61.0867L213.127 70.5969Z" fill="#071D54"/>
+<path d="M230.79 86.1838L229.531 81.1333L239.632 78.6148L240.891 83.6653L230.79 86.1838Z" fill="#071D54"/>
+<path d="M191.454 76.5478L194.134 72.0862L203.058 77.4479L200.377 81.9095L191.454 76.5478Z" fill="#071D54"/>
+<path d="M202.927 110.274L198.465 107.593L203.827 98.6702L208.289 101.351L202.927 110.274Z" fill="#071D54"/>
+<path d="M224.044 75.1305L219.582 72.4497L224.944 63.5263L229.405 66.2072L224.044 75.1305Z" fill="#071D54"/>
 </g>
 <g id="Bottom">
-<g id="Bottom Trapazoid">
-<path d="M83.5 147H224L244 193H64L83.5 147Z" fill="#9DF3FF"/>
-<path d="M83.5 147H224L244 193H64L83.5 147Z" stroke="#071D54"/>
+<g id="Bottom Trapazoid" style="mix-blend-mode:soft-light">
+<path d="M84.3917 143H224.111L244 193H65L84.3917 143Z" fill="#071D54"/>
+<path d="M84.3917 143H224.111L244 193H65L84.3917 143Z" stroke="#071D54"/>
 </g>
 <g id="Screw_8">
-<circle id="Ellipse 1_8" cx="154.5" cy="167.5" r="4" fill="#9D9D9D" stroke="#787878"/>
+<circle id="Ellipse 1_8" cx="155.5" cy="166.5" r="4" fill="#3F43A6" stroke="#21328D"/>
 <g id="cross_8">
-<rect id="Rectangle 10_8" x="152.909" y="167.182" width="3.18182" height="0.636364" fill="#071D54"/>
-<rect id="Rectangle 11_8" x="154.182" y="169.091" width="3.18182" height="0.636364" transform="rotate(-90 154.182 169.091)" fill="#071D54"/>
+<rect id="Rectangle 10_8" x="153.909" y="166.182" width="3.18182" height="0.636364" fill="#071D54"/>
+<rect id="Rectangle 11_8" x="155.182" y="168.091" width="3.18182" height="0.636364" transform="rotate(-90 155.182 168.091)" fill="#071D54"/>
 </g>
 <g id="Screw_9">
-<circle id="Ellipse 1_9" cx="154" cy="168" r="4.5" fill="#5C5A5A" fill-opacity="0.76" stroke="#353535"/>
+<circle id="Ellipse 1_9" cx="155" cy="167" r="4.5" fill="white" fill-opacity="0.76" stroke="#110F7B"/>
 <g id="cross_9">
-<rect id="Rectangle 10_9" x="152.182" y="167.636" width="3.63636" height="0.727273" fill="#071D54"/>
-<rect id="Rectangle 11_9" x="153.636" y="169.818" width="3.63636" height="0.727273" transform="rotate(-90 153.636 169.818)" fill="#071D54"/>
+<rect id="Rectangle 10_9" x="153.182" y="166.636" width="3.63636" height="0.727273" fill="#071D54"/>
+<rect id="Rectangle 11_9" x="154.636" y="168.818" width="3.63636" height="0.727273" transform="rotate(-90 154.636 168.818)" fill="#071D54"/>
 </g>
 </g>
 </g>
@@ -140,25 +133,25 @@
 </g>
 </g>
 <defs>
-<filter id="filter0_d_46_164" x="0.9" y="0.9" width="306.2" height="213.2" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_d_654_500" x="0.9" y="0.9" width="306.2" height="213.2" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feOffset dy="4"/>
 <feGaussianBlur stdDeviation="4.55"/>
 <feComposite in2="hardAlpha" operator="out"/>
 <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.46 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_46_164"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_46_164" result="shape"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_654_500"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_654_500" result="shape"/>
 </filter>
-<filter id="filter1_d_46_164" x="20" y="33" width="267" height="118" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter1_d_654_500" x="20" y="33" width="267" height="118" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feOffset dy="4"/>
 <feGaussianBlur stdDeviation="2"/>
 <feComposite in2="hardAlpha" operator="out"/>
 <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_46_164"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_46_164" result="shape"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_654_500"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_654_500" result="shape"/>
 </filter>
 </defs>
 </svg>

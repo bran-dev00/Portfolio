@@ -15,7 +15,7 @@ export const SmallProjectCard = ({
           />
         </a>
 
-        <div className=" w-full bg-[#2b6439d7] h-[100px] text-white  p-4 rounded-br-md rounded-bl-md">
+        <div className=" w-full bg-[#2b6439d7] h-[100px] text-white  p-5 rounded-br-md rounded-bl-md">
           <h1 className="text-white font-bold text-3xl">{cardDescription}</h1>
           <span>Skills:</span>
         </div>
