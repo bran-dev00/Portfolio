@@ -10,14 +10,12 @@ import { useState, useRef, useEffect } from "react";
 
 export const CassetteTape = () => {
   const [isPlaying, setIsPlaying] = useState(false);
-  const [isRewinding, setIsRewinding] = useState(false);
-  const [isFastForwarding, setIsFastForwarding] = useState(false);
-
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
 
   const audioElem = useRef();
   const progressBar = useRef();
+  const animationRef = useRef();
 
   useEffect(() => {
     const seconds = Math.floor(audioElem.current.duration);
@@ -36,32 +34,43 @@ export const CassetteTape = () => {
 
   const changeProgressWidth = () => {
     audioElem.current.currentTime = progressBar.current.value;
-    progressBar.current.style.setProperty();
     setCurrentTime(progressBar.current.value);
+  };
+
+  const whilePlaying = () => {
+    progressBar.current.value = audioElem.current.currentTime;
+    setCurrentTime(progressBar.current.value);
+    requestAnimationFrame(whilePlaying);
   };
 
   const handlePlay = () => {
     console.log("play button clicked");
     setIsPlaying(true);
     audioElem.current.play();
+    animationRef.current = requestAnimationFrame(whilePlaying);
   };
 
   const handlePause = () => {
     console.log("pause button clicked");
     setIsPlaying(false);
     audioElem.current.pause();
+    cancelAnimationFrame(animationRef.current);
   };
   const handleStop = () => {
     console.log("stop button clicked");
     setIsPlaying(false);
     audioElem.current.pause();
     audioElem.current.currentTime = 0;
+    setCurrentTime(0);
+    progressBar.current.value = 0;
+    cancelAnimationFrame(animationRef.current);
   };
 
   const handleReset = () => {
     console.log("reset button clicked");
     setIsPlaying(false);
     audioElem.current.currentTime = 0;
+    cancelAnimationFrame(animationRef.current);
   };
 
   return (
@@ -95,12 +104,14 @@ export const CassetteTape = () => {
 
         {/*  seek bar */}
         <div className="w-[300px] border my-5 p-2 rounded-md">
-          <div className={`w-[10px] bg-accent h-2`}></div>
+          <div className={`w-[180px] bg-accent h-2`}></div>
 
           <div>
             <input
               type="range"
-              className={`w-[${(currentTime / duration) * 100}px]`}
+              className={`w-[120px] [&::-webkit-slider-runnable-track]:${
+                (currentTime / duration) * 100
+              }%`}
               defaultValue={"0"}
               ref={progressBar}
               onChange={changeProgressWidth}
@@ -108,7 +119,7 @@ export const CassetteTape = () => {
           </div>
 
           <div className="text-center">
-            {formatTime(currentTime)} /{" "}
+            {formatTime(currentTime)}/{" "}
             {duration ? formatTime(duration) : `00:00`}
           </div>
         </div>

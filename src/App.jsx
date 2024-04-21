@@ -54,7 +54,7 @@ function App() {
             />
           </div>
           {/* Scroll Down */}
-          <div className="bg-accent rounded-sm animate-bounce ease-in-out bg-center absolute bottom-[-50px] left-[45%] w-60 h-4 mb-5"></div>
+          <div className="bg-accent rounded-sm motion-reduce:hidden animate-bounce ease-in-out bg-center absolute bottom-[-50px] left-[45%] w-60 h-4 mb-5"></div>
         </header>
 
         <section className="container mx-auto text-white text-lg font-inria">
