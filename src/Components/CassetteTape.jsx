@@ -4,7 +4,8 @@ import spoolLeft from "../assets/spoolLeft.svg";
 import playBtn from "../assets/playBtn.svg";
 import stopBtn from "../assets/stopBtn.svg";
 import pauseBtn from "../assets/pauseBtn.svg";
-import resetBtn from "../assets/resetBtn.svg";
+import minusBtn from "../assets/minusBtn.png";
+import plusBtn from "../assets/plusBtn.png";
 import testSong from "../assets/testSong.wav";
 import { useState, useRef, useEffect } from "react";
 
@@ -17,6 +18,7 @@ export const CassetteTape = () => {
   const progressBar = useRef();
   const animationRef = useRef();
 
+  // Load Timestamps
   useEffect(() => {
     const seconds = Math.floor(audioElem.current.duration);
     setDuration(seconds);
@@ -24,6 +26,7 @@ export const CassetteTape = () => {
     progressBar.current.max = seconds;
   }, [audioElem?.current?.loadedmetadata, audioElem?.current?.readyState]);
 
+  // 00:00 time format
   const formatTime = (secs) => {
     const minutes = Math.floor(secs / 60);
     const returnedMinutes = minutes < 10 ? `0${minutes}` : `${minutes}`;
@@ -32,15 +35,34 @@ export const CassetteTape = () => {
     return `${returnedMinutes}:${returnedSeconds}`;
   };
 
+  // Progress bar seeking -> changes audio to match progress bar
   const changeProgressWidth = () => {
     audioElem.current.currentTime = progressBar.current.value;
     setCurrentTime(progressBar.current.value);
   };
 
+  // Animation for progressbar -> changes progressbar to match the audio's current time
   const whilePlaying = () => {
     progressBar.current.value = audioElem.current.currentTime;
     setCurrentTime(progressBar.current.value);
     requestAnimationFrame(whilePlaying);
+  };
+
+  const handleVolumeUp = () => {
+    if (audioElem.current.volume >= 1) {
+      audioElem.current.volume = 1;
+    } else {
+      audioElem.current.volume += 0.1;
+    }
+    console.log("up");
+  };
+  const handleVolumeDown = () => {
+    if (audioElem.current.volume <= 0) {
+      audioElem.current.volume = 0;
+    } else {
+      audioElem.current.volume -= 0.1;
+    }
+    console.log("down");
   };
 
   const handlePlay = () => {
@@ -66,24 +88,17 @@ export const CassetteTape = () => {
     cancelAnimationFrame(animationRef.current);
   };
 
-  const handleReset = () => {
-    console.log("reset button clicked");
-    setIsPlaying(false);
-    audioElem.current.currentTime = 0;
-    cancelAnimationFrame(animationRef.current);
-  };
-
   return (
-    <div className="flex flex-col">
-      <div className="position relative">
+    <div className=" text-background font-bold bg-accent  p-5 my-5 items-center">
+      <div className="position relative flex flex-col">
         <img src={cassetteTape} alt="cassette tape" />
 
         <div>
           <img
             className={
               isPlaying
-                ? "absolute top-[58px] left-16 animate-spin"
-                : "absolute top-[58px] left-16"
+                ? "absolute top-[68px] left-[70px] animate-spin"
+                : "absolute top-[68px] left-[70px]"
             }
             src={spoolLeft}
             alt="cassette spool"
@@ -91,53 +106,77 @@ export const CassetteTape = () => {
           <img
             className={
               isPlaying
-                ? "absolute top-[58px] right-16 animate-spin"
-                : "absolute top-[58px] right-16"
+                ? "absolute top-[68px] right-[70px] animate-spin"
+                : "absolute top-[68px] right-[70px]"
             }
             src={spoolLeft}
             alt="cassette spool"
           />
         </div>
 
-        <a href="#">View Transcript</a>
-        <audio controls ref={audioElem} src={testSong}></audio>
+        <audio ref={audioElem} src={testSong}></audio>
 
-        {/*  seek bar */}
-        <div className="w-[300px] border my-5 p-2 rounded-md">
-          <div className={`w-[180px] bg-accent h-2`}></div>
+        {/*Audio Container*/}
+
+        {/* Control Buttons */}
+        <div className="border-2 rounded-lg p-5 my-3 relative flex flex-col justify-center items-center">
+          <a className="text-center" href="#">
+            View Transcript
+          </a>
+          <div className="w-[300px] flex flex-col justify-center items-center  my-5 p-2 rounded-md">
+            {/* Progress Bar */}
+            <div>
+              {/* <label htmlFor="progressBar">Seek:</label> */}
+              <input
+                type="range"
+                name="progressBar"
+                className={`w-[250px]`}
+                defaultValue={"0"}
+                ref={progressBar}
+                onChange={changeProgressWidth}
+              />
+            </div>
+
+            {/* Volume Slider? */}
+            {/* <div>
+            <label htmlFor="volume">Volume </label>
+            <input
+              name="volume"
+              type="range"
+              onChange={handleChangeVolume}
+              ref={volumeBarRef}
+            />
+          </div> */}
+
+            {/* Current Time  */}
+            <div className="text-center">
+              {formatTime(currentTime)}/{" "}
+              {duration ? formatTime(duration) : `00:00`}
+            </div>
+          </div>
 
           <div>
-            <input
-              type="range"
-              className={`w-[120px] [&::-webkit-slider-runnable-track]:${
-                (currentTime / duration) * 100
-              }%`}
-              defaultValue={"0"}
-              ref={progressBar}
-              onChange={changeProgressWidth}
-            />
+            <button onClick={handlePlay}>
+              <img src={playBtn} alt="play button" />
+            </button>
+
+            <button onClick={handlePause}>
+              <img src={pauseBtn} alt="pause button" />
+            </button>
+            <button onClick={handleStop}>
+              <img src={stopBtn} alt="stop button" />
+            </button>
           </div>
 
-          <div className="text-center">
-            {formatTime(currentTime)}/{" "}
-            {duration ? formatTime(duration) : `00:00`}
+          <div className="">
+            <button onClick={handleVolumeDown}>
+              <img src={minusBtn} alt="" />
+            </button>
+
+            <button onClick={handleVolumeUp}>
+              <img src={plusBtn} alt="" />
+            </button>
           </div>
-        </div>
-
-        <div className="flex gap-4 my-3">
-          <button onClick={handlePlay}>
-            <img src={playBtn} alt="play button" />
-          </button>
-
-          <button onClick={handlePause}>
-            <img src={pauseBtn} alt="pause button" />
-          </button>
-          <button onClick={handleStop}>
-            <img src={stopBtn} alt="stop button" />
-          </button>
-          <button onClick={handleReset}>
-            <img src={resetBtn} alt="reset button" />
-          </button>
         </div>
       </div>
     </div>
