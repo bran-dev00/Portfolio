@@ -118,7 +118,7 @@ function App() {
           </div>
         </section>
 
-        <section className="container mx-auto p-16 border flex justify-center items-center">
+        <section className="container mx-auto p-16 border flex justify-center items-center h-[800px]">
           <ContactMe />
         </section>
 
