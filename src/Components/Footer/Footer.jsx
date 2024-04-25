@@ -8,7 +8,19 @@ import {
 const Footer = () => {
   return (
     <div>
-      <footer className="bg-slate-900 flex justify-center h-60">
+      <footer className="bg-slate-900 p-8 my-8 flex justify-evenly h-60">
+        <div>
+          <h3 className="text-white font-bold">Brandon</h3>
+        </div>
+
+        <div>
+          <h3 className="text-white font-bold">Explore</h3>
+        </div>
+
+        <div>
+          <h3 className="text-white font-bold">Follow</h3>
+        </div>
+
         <div>
           <ul>
             <li className="my-3">
