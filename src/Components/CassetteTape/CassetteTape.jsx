@@ -1,12 +1,11 @@
-import "./CassetteTape.css";
-import cassetteTape from "../assets/CassetteBase.png";
-import spoolLeft from "../assets/spoolLeft.svg";
-import playBtn from "../assets/playBtn.svg";
-import stopBtn from "../assets/stopBtn.svg";
-import pauseBtn from "../assets/pauseBtn.svg";
-import minusBtn from "../assets/minusBtn.png";
-import plusBtn from "../assets/plusBtn.png";
-import testSong from "../assets/testSong.wav";
+import cassetteTape from "../../assets/CassetteBase.png";
+import spoolLeft from "../../assets/spoolLeft.svg";
+import playBtn from "../../assets/playBtn.svg";
+import stopBtn from "../../assets/stopBtn.svg";
+import pauseBtn from "../../assets/pauseBtn.svg";
+import minusBtn from "../../assets/minusBtn.png";
+import plusBtn from "../../assets/plusBtn.png";
+import testSong from "../../assets/testSong.wav";
 import { useState, useRef, useEffect } from "react";
 
 export const CassetteTape = () => {

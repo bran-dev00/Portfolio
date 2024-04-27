@@ -8,17 +8,17 @@ import {
 
 export const Socials = () => {
   return (
-    <div className="flex flex-col justify-center place-items-center gap-5 absolute left-0 bottom-0 ">
-      <a href="#">
+    <div className="flex flex-col justify-center place-items-center gap-5 fixed bottom-10 left-10">
+      <a className="fa-xl" href="#">
         <FontAwesomeIcon icon={faLinkedin} />
       </a>
-      <a href="#">
+      <a className="fa-xl" href="#">
         <FontAwesomeIcon icon={faGithub} />
       </a>
-      <a href="#">
+      <a className="fa-xl" href="#">
         <FontAwesomeIcon icon={faCodepen} />
       </a>
-      <a href="#">
+      <a className="fa-xl" href="#">
         <FontAwesomeIcon icon={faEnvelope} />
       </a>
     </div>

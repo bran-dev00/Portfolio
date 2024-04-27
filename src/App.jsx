@@ -4,9 +4,8 @@ import HeroPicture from "./assets/SkillsHoneyComb.png";
 import GradPicture from "./assets/GraduationPicture.png";
 import Footer from "./Components/Footer/Footer";
 import { Socials } from "./Components/socials";
-import ProjectCard from "./Components/Projects/ProjectCard";
 import { SmallProjectCard } from "./Components/Projects/SmallProjectCard";
-import { CassetteTape } from "./Components/CassetteTape";
+import { CassetteTape } from "./Components/CassetteTape/CassetteTape";
 import { ContactMe } from "./Components/ContactMe/ContactMe";
 
 function App() {
@@ -18,6 +17,7 @@ function App() {
       "https://img.freepik.com/free-photo/portrait-adorable-cavapoo-dog-holding-tennis-ball-park-sunny-day_181624-59516.jpg?t=st=1713199924~exp=1713203524~hmac=0c3853ead18e9ca1a3940aefb912055fbaf70a500f6976c79b18588d4e3d7801&w=1380",
     altDescription: "placeholder",
     cardDescription: "Title of project",
+    finished: false,
   };
 
   return (
@@ -26,7 +26,7 @@ function App() {
         <Navbar />
         <Socials />
 
-        <header className="relative">
+        <header className="">
           <div className="container border flex mx-auto p-8 items-center mt-8 mb-16 gap-x-96 font-inria">
             {/* Left Text */}
             <div className="flex flex-col max-w-[800px] mx-auto p-8 ">
@@ -58,7 +58,7 @@ function App() {
           {/* <div className="container mx-auto bg-accent rounded-sm motion-reduce:hidden animate-bounce ease-in-out  absolute bottom-[-50px] left-[45%] w-60 h-4 mb-5"></div> */}
         </header>
 
-        <section className="container mx-auto border text-white text-lg p-16 my-16 font-inria">
+        <section className="container mx-auto  text-white text-lg p-16 my-8 font-inria ">
           <h1 className="text-center text-8xl">Projects</h1>
 
           {/* Project Grid */}
@@ -67,32 +67,38 @@ function App() {
             <SmallProjectCard
               cardImage={project.cardImage}
               cardDescription={project.cardDescription}
+              finished={project.finished}
             />
             <SmallProjectCard
               cardImage={project.cardImage}
               cardDescription={project.cardDescription}
+              finished={project.finished}
             />
             <SmallProjectCard
               cardImage={project.cardImage}
               cardDescription={project.cardDescription}
+              finished={project.finished}
             />
             <SmallProjectCard
               cardImage={project.cardImage}
               cardDescription={project.cardDescription}
+              finished={true}
             />
             <SmallProjectCard
               cardImage={project.cardImage}
               cardDescription={project.cardDescription}
+              finished={true}
             />
             <SmallProjectCard
               cardImage={project.cardImage}
               cardDescription={project.cardDescription}
+              finished={true}
             />
           </div>
         </section>
 
         {/* About Section */}
-        <section className="container flex flex-col items-center mx-auto text-white text-lg font-inria my-8 border ">
+        <section className="container flex flex-col items-center mx-auto text-white text-lg font-inria my-8   ">
           <h1 className="text-center text-8xl p-10">About Me</h1>
 
           <div className="relative border rounded-lg p-16 m-8 bg-emerald-700">
@@ -101,7 +107,7 @@ function App() {
                 <CassetteTape />
               </div>
 
-              <div className="flex flex-col w-[800px] h-[628px] bg-emerald-800   my-8 p-8 items-center ">
+              <div className="flex flex-col w-[800px] h-[628px] bg-emerald-800 my-8 p-8 items-center ">
                 <img
                   className="object-contain w-[300px] h-[300px] mb-8"
                   src={GradPicture}
@@ -118,7 +124,10 @@ function App() {
           </div>
         </section>
 
-        <section className="container mx-auto p-16 border flex justify-center items-center h-[800px]">
+        <section
+          className="container mx-auto p-16 my-16
+         flex flex-col justify-center items-center h-[800px]"
+        >
           <ContactMe />
         </section>
 

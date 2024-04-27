@@ -18,16 +18,16 @@ export const ContactMe = () => {
 
         <form
           action="submit "
-          className=" text-black flex flex-col h-[400px] justify-center gap-4 p-8 m-8"
+          className=" max-h-[500px] text-black flex flex-col justify-center gap-4 p-8 m-8"
         >
           <input
             type="text"
             name="name"
             placeholder="Enter your name"
-            className="p-4 rounded-md"
+            className="p-4 rounded-md focus:outline-none border border-transparent focus:ring-2 focus:ring-accent"
           />
           <input
-            className="p-4 rounded-md"
+            className="p-4 rounded-md focus:outline-none border border-transparent focus:ring-2 focus:ring-accent"
             type="email"
             name="email"
             placeholder="Enter your email"
@@ -35,7 +35,7 @@ export const ContactMe = () => {
           />
 
           <textarea
-            className="h-32 rounded-md p-4"
+            className="h-40 rounded-md p-4 focus:outline-none border border-transparent focus:ring-2 focus:ring-accent"
             placeholder="Write your message here..."
             required={true}
           ></textarea>
