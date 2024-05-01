@@ -29,11 +29,6 @@ export default {
           },
         },
       },
-
-      backgroundImage: {
-        "hero-pattern":
-          "url('https://c4.wallpaperflare.com/wallpaper/984/1004/39/pixel-art-chair-computer-pixels-wallpaper-preview.jpg')",
-      },
     },
   },
   plugins: [],

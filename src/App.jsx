@@ -7,17 +7,32 @@ import { Socials } from "./Components/socials";
 import { SmallProjectCard } from "./Components/Projects/SmallProjectCard";
 import { CassetteTape } from "./Components/CassetteTape/CassetteTape";
 import { ContactMe } from "./Components/ContactMe/ContactMe";
-
+import Disassembler from "./assets/disassembler.png";
 function App() {
   const [interestText, setInterestText] = useState("Audio Programming");
 
   // Test:
-  const project = {
+  const javaProject = {
+    cardImage: Disassembler,
+    altDescription: "placeholder",
+    cardTitle: "Assembly Dissasembler",
+    finished: true,
+    stack: ["java"],
+  };
+
+  const reactProject = {
     cardImage:
       "https://img.freepik.com/free-photo/portrait-adorable-cavapoo-dog-holding-tennis-ball-park-sunny-day_181624-59516.jpg?t=st=1713199924~exp=1713203524~hmac=0c3853ead18e9ca1a3940aefb912055fbaf70a500f6976c79b18588d4e3d7801&w=1380",
     altDescription: "placeholder",
-    cardDescription: "Title of project",
+    cardTitle: "Steam Roll",
     finished: false,
+    stack: ["javascript", "react", "node"],
+  };
+
+  const pokemonProject = {
+    cardTitle: "ASCII Pokemon Console Game",
+    finished: false,
+    stack: ["cpp", "c"],
   };
 
   return (
@@ -65,34 +80,21 @@ function App() {
 
           <div className="grid grid-cols-3 gap-2 my-8 border p-16 place-items-center bg-emerald-900">
             <SmallProjectCard
-              cardImage={project.cardImage}
-              cardDescription={project.cardDescription}
-              finished={project.finished}
+              cardImage={javaProject.cardImage}
+              cardTitle={javaProject.cardTitle}
+              finished={javaProject.finished}
+              stack={javaProject.stack}
             />
             <SmallProjectCard
-              cardImage={project.cardImage}
-              cardDescription={project.cardDescription}
-              finished={project.finished}
+              finished={pokemonProject.finished}
+              cardTitle={pokemonProject.cardTitle}
+              stack={pokemonProject.stack}
             />
             <SmallProjectCard
-              cardImage={project.cardImage}
-              cardDescription={project.cardDescription}
-              finished={project.finished}
-            />
-            <SmallProjectCard
-              cardImage={project.cardImage}
-              cardDescription={project.cardDescription}
-              finished={true}
-            />
-            <SmallProjectCard
-              cardImage={project.cardImage}
-              cardDescription={project.cardDescription}
-              finished={true}
-            />
-            <SmallProjectCard
-              cardImage={project.cardImage}
-              cardDescription={project.cardDescription}
-              finished={true}
+              cardImage={reactProject.cardImage}
+              cardTitle={reactProject.cardTitle}
+              finished={reactProject.finished}
+              stack={reactProject.stack}
             />
           </div>
         </section>
