@@ -31,6 +31,7 @@ function App() {
 
   const pokemonProject = {
     cardTitle: "ASCII Pokemon Console Game",
+    cardImage: Disassembler,
     finished: false,
     stack: ["cpp", "c"],
   };
@@ -88,6 +89,7 @@ function App() {
             <SmallProjectCard
               finished={pokemonProject.finished}
               cardTitle={pokemonProject.cardTitle}
+              cardImage={pokemonProject.cardImage}
               stack={pokemonProject.stack}
             />
             <SmallProjectCard
@@ -96,6 +98,7 @@ function App() {
               finished={reactProject.finished}
               stack={reactProject.stack}
             />
+            <span>Under Construction projects are still in development, </span>
           </div>
         </section>
 
