@@ -7,11 +7,13 @@ export default {
     extend: {
       colors: {
         text: "#ebf6f0",
-        darkText: "#050A30",
-        background: "#11222F",
-        primary: "#18D8E4",
-        secondary: "#1b2720",
+        background: "#171c28",
+        primary: "#1d2433",
+        secondary: "#2d4377",
+        secondaryRed: "#9E1829",
         accent: "#49F67A",
+        secondaryAccent: "#ffd580",
+        cassetteBackground: "#9E1829",
       },
       fontFamily: {
         inria: ["inria", "serif"],

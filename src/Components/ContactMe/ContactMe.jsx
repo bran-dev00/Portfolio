@@ -9,7 +9,7 @@ export const ContactMe = () => {
 
   return (
     <div>
-      <div className=" text-black bg-slate-700 p-8 my-8 h-[700px] rounded-lg ">
+      <div className=" text-black bg-secondary/30 p-8 my-8 h-[700px] rounded-lg ">
         <h1 className="text-4xl text-white font-bold text-center">
           Get in touch with me
         </h1>

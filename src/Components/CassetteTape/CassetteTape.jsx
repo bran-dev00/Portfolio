@@ -88,7 +88,7 @@ export const CassetteTape = () => {
   };
 
   return (
-    <div className=" text-background font-bold bg-accent  p-5 my-5 items-center">
+    <div className=" text-text font-bold bg-secondary p-5 my-5 items-center">
       <div className="position relative flex flex-col">
         <img src={cassetteTape} alt="cassette tape" />
 
@@ -118,7 +118,7 @@ export const CassetteTape = () => {
         {/*Audio Container*/}
 
         {/* Control Buttons */}
-        <div className="border-2 rounded-lg p-5 my-3 relative flex flex-col justify-center items-center">
+        <div className=" bg-background/40 border-2 rounded-lg p-5 my-3 relative flex flex-col justify-center items-center">
           <a className="text-center" href="#">
             View Transcript
           </a>

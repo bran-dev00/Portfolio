@@ -13,25 +13,29 @@ function App() {
 
   // Test:
   const javaProject = {
-    cardImage: Disassembler,
-    altDescription: "placeholder",
-    cardTitle: "Assembly Dissasembler",
+    image: Disassembler,
+    imgAltDescription: "placeholder",
+    title: "Assembly Dissasembler",
     finished: true,
     stack: ["java"],
+    description:
+      "For my computer architecture class we were tasked to write a dissasembler in java that takes some machine code and converts it to assembly instructions.",
   };
 
   const reactProject = {
-    cardImage:
+    image:
       "https://img.freepik.com/free-photo/portrait-adorable-cavapoo-dog-holding-tennis-ball-park-sunny-day_181624-59516.jpg?t=st=1713199924~exp=1713203524~hmac=0c3853ead18e9ca1a3940aefb912055fbaf70a500f6976c79b18588d4e3d7801&w=1380",
-    altDescription: "placeholder",
-    cardTitle: "Steam Roll",
+    imgAltDescription: "placeholder",
+    title: "Steam Roll",
     finished: false,
     stack: ["javascript", "react", "node"],
+    description:
+      "This project is currently still in development, but I am building a web app that chooses a random game from your steam library. Why? Well over the years many people probably have ammased a large collection of games in their steam library's from the mutliple steam sales in the year, so people can get analysis paralysis or too overwhelmed on what game to play that they don't play anthing.This project is currently still in development, but I am building a web app that chooses a random game from your steam library. Why? Well over the years many people probably have ammased a large collection of games in their steam library's from the mutliple steam sales in the year, so people can get analysis paralysis or too overwhelmed on what game to play that they don't play anthing.This project is currently still in development, but I am building a web app that chooses a random game from your steam library. Why? Well over the years many people probably have ammased a large collection of games in their steam library's from the mutliple steam sales in the year, so people can get analysis paralysis or too overwhelmed on what game to play that they don't play anthing. This project is currently still in development, but I am building a web app that chooses a random game from your steam library. Why? Well over the years many people probably have ammased a large collection of games in their steam library's from the mutliple steam sales in the year, so people can get analysis paralysis or too overwhelmed on what game to play that they don't play anthing This project is currently still in development, but I am building a web app This project is currently still in development, but I am building a web app.",
   };
 
   const pokemonProject = {
-    cardTitle: "ASCII Pokemon Console Game",
-    cardImage: Disassembler,
+    title: "ASCII Pokemon Console Game",
+    image: Disassembler,
     finished: false,
     stack: ["cpp", "c"],
   };
@@ -79,42 +83,46 @@ function App() {
 
           {/* Project Grid */}
 
-          <div className="grid grid-cols-3 gap-2 my-8 border p-16 place-items-center bg-emerald-900">
+          <div className="grid grid-cols-3 gap-2 my-8 rounded-md p-16 place-items-center bg-primary">
             <SmallProjectCard
-              cardImage={javaProject.cardImage}
-              cardTitle={javaProject.cardTitle}
+              image={javaProject.image}
+              title={javaProject.title}
               finished={javaProject.finished}
               stack={javaProject.stack}
+              description={javaProject.description}
             />
             <SmallProjectCard
               finished={pokemonProject.finished}
-              cardTitle={pokemonProject.cardTitle}
-              cardImage={pokemonProject.cardImage}
+              title={pokemonProject.title}
+              image={pokemonProject.image}
               stack={pokemonProject.stack}
             />
             <SmallProjectCard
-              cardImage={reactProject.cardImage}
-              cardTitle={reactProject.cardTitle}
+              image={reactProject.image}
+              title={reactProject.title}
               finished={reactProject.finished}
               stack={reactProject.stack}
+              description={reactProject.description}
             />
-            <span>Under Construction projects are still in development, </span>
+            <span className="text-secondaryAccent text-xl font-bold">
+              Under Construction projects are still in development,{" "}
+            </span>
           </div>
         </section>
 
         {/* About Section */}
         <section className="container flex flex-col items-center mx-auto text-white text-lg font-inria my-8   ">
-          <h1 className="text-center text-8xl p-10">About Me</h1>
+          <h1 className="text-center text-8xl p-8">About Me</h1>
 
-          <div className="relative border rounded-lg p-16 m-8 bg-emerald-700">
+          <div className="relative rounded-lg p-16 m-8 bg-primary">
             <div className="flex justify-center items-center">
               <div className="">
                 <CassetteTape />
               </div>
 
-              <div className="flex flex-col w-[800px] h-[628px] bg-emerald-800 my-8 p-8 items-center ">
+              <div className="flex flex-col w-[800px] h-[628px] bg-[#9E1829]   my-8 p-8 items-center ">
                 <img
-                  className="object-contain w-[300px] h-[300px] mb-8"
+                  className="object-contain w-[300px] h-[300px] mb-8 rounded-lg "
                   src={GradPicture}
                   alt="My Graduation Picture"
                 />
