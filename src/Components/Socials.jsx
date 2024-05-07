@@ -8,7 +8,7 @@ import {
 
 export const Socials = () => {
   return (
-    <div className="flex flex-col justify-center place-items-center gap-5 fixed bottom-10 left-10">
+    <div className="flex flex-col justify-center place-items-center gap-5 fixed lg:left-5 md:left-3 bottom-10 left-10 z-10">
       <a className="fa-xl" href="#">
         <FontAwesomeIcon icon={faLinkedin} />
       </a>

@@ -8,7 +8,7 @@ import {
 const Footer = () => {
   return (
     <div>
-      <footer className="bg-slate-900 p-8 mt-8 flex justify-evenly h-60 relative">
+      <footer className="bg-slate-900 p-8 mt-8 flex justify-evenly h-60 relative z-20">
         <div>
           <h3 className="text-white font-bold my-4">Brandon Chavez</h3>
           <p>My personal portfolio</p>
