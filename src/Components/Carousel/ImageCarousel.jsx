@@ -1,3 +1,9 @@
+import {
+  faArrowAltCircleRight,
+  faArrowLeft,
+  faArrowRight,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 
 export const ImageCarousel = ({ items }) => {
@@ -20,29 +26,32 @@ export const ImageCarousel = ({ items }) => {
   };
 
   return (
-    <div>
+    <div className="relative px-8">
       {/* Content */}
-      <div className=" rounded-md p-4">
+      <div className="flex flex-col items-center justify-center rounded-md p-8 mx-2 ">
         <img
           className="w-[400px] h-[300px]"
           src={items[currentIndex]}
           alt="Screenshot"
         />
-      </div>
 
-      <div className="flex gap-4">
         <button
-          className="rounded-md p-4 bg-accent text-black"
+          className="absolute left-1 bottom-[40%] rounded-md p-4 bg-accent text-black"
           onClick={handlePreviousImage}
         >
-          Left
+          <FontAwesomeIcon icon={faArrowLeft} />
         </button>
         <button
-          className="rounded-md p-4 bg-accent text-black"
+          className="absolute right-1 bottom-[40%] rounded-md p-4 bg-accent text-black"
           onClick={handleNextImage}
         >
-          Right
+          <FontAwesomeIcon icon={faArrowRight} />
         </button>
+
+        {/* Item Indicator */}
+        <span className="text-center font-bold font-mono absolute bottom-0   left-[45%]">{`${
+          currentIndex + 1
+        } / ${items.length}`}</span>
       </div>
     </div>
   );

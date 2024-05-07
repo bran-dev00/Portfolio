@@ -24,7 +24,6 @@ export const ContactMe = () => {
           className=" max-h-[500px] min-w-[800px] text-black flex flex-col justify-center gap-4 p-8 my-4"
         >
           <input type="checkbox" name="botcheck" className="hidden"></input>
-          <input type="hidden" name="access_key"></input>
           <input
             type="text"
             name="name"
