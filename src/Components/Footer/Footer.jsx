@@ -8,40 +8,51 @@ import {
 const Footer = () => {
   return (
     <div>
-      <footer className="bg-slate-900 flex justify-center h-60">
+      <footer className="bg-slate-900 p-8 mt-8 flex justify-evenly h-60 relative">
         <div>
+          <h3 className="text-white font-bold my-4">Brandon Chavez</h3>
+          <p>My personal portfolio</p>
+          <span className="py-8"> Brandon &copy; 2024</span>
+        </div>
+
+        <div>
+          <h3 className="text-white font-bold my-4">Explore</h3>
           <ul>
-            <li className="my-3">
-              <a href="#" className="underline text-[20px] py-5">
-                Contact Me
-              </a>
+            <li>
+              <a href="#">Home</a>
             </li>
-            <li className="my-3">
-              <a href="#" className="underline text-[20px] py-5">
-                About
-              </a>
+            <li>
+              <a href="#"> Projects</a>
             </li>
-            <li className="my-3">
-              <a href="#" className="underline text-[20px] py-5">
-                Projects
-              </a>
+            <li>
+              <a href="#">About Me</a>
+            </li>
+            <li>
+              <a href="#">Contact Me</a>
             </li>
           </ul>
+        </div>
 
-          <ul className="flex justify-center gap-4">
+        <div>
+          <h3 className="text-white font-bold my-4">Follow</h3>
+
+          <ul className="flex flex-col items-center gap-4">
             <li>
-              <a href="#">
+              <a className="fa-xl p-4" href="#">
                 <FontAwesomeIcon icon={faLinkedin} />
               </a>
             </li>
             <li>
-              <a href="#">
+              <a className="fa-xl p-4" href="#">
                 <FontAwesomeIcon icon={faGithub} />
               </a>
             </li>
+            <li>
+              <a className="fa-xl p-4" href="#">
+                <FontAwesomeIcon icon={faCodepen} />
+              </a>
+            </li>
           </ul>
-
-          <span className="text-sm "> Brandon &copy; 2024</span>
         </div>
       </footer>
     </div>
