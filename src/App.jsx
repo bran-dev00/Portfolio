@@ -47,21 +47,22 @@ function App() {
         <Socials />
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-16 xl:px-16 ">
-          <header className=" border flex p-8 items-center mt-8 mb-8 gap-x-80 font-inria 2xl:gap-x-80 xl:gap-x-80 lg:gap-x-64 md:gap-x-64 ">
+          <header className=" border flex p-8 items-center mt-8 mb-8 gap-x-80 font-inria 2xl:gap-x-80 xl:gap-x-80 lg:gap-x-56 md:gap-x-56 ">
             {/* Left Text */}
+
             <div className="flex flex-col max-w-[800px] mx-auto p-8 ">
-              <h1 className="max-w-[700px] mb-8 2xl:text-8xl xl:text-6xl lg:text-5xl md:text-5xl sm:text-5xl ">
+              <h1 className=" mb-8 2xl:text-8xl xl:text-6xl lg:text-5xl md:text-5xl sm:text-5xl ">
                 Hi there, my name is Brandon
               </h1>
 
-              <h2 className="text-4xl lg:text-3xl">
+              <h2 className="lg:text-3xl xl:text-4xl md:text-2xl">
                 I’m a Computer Science graduate from Iowa State University
               </h2>
 
-              <h3 className="text-4xl lg:text-3xl mt-4  ">
+              <h3 className="lg:text-3xl xl:text-4xl md:text-2xl mt-4  ">
                 I have an interest in <br />
                 Full-Stack Development and{" "}
-                <span className=" font-bold block mt-5 text-center rounded-md p-4 bg-accent text-black">
+                <span className=" font-bold block mt-5 text-center rounded-md p-4 bg-accent text-black xl:text-3xl lg:text-xl md:text-lg sm:text-md">
                   {interestText}
                 </span>
               </h3>
@@ -78,7 +79,9 @@ function App() {
           {/* <div className="container mx-auto bg-accent rounded-sm motion-reduce:hidden animate-bounce ease-in-out  absolute bottom-[-50px] left-[45%] w-60 h-4 mb-5"></div> */}
 
           <section className="text-text text-lg my-8 font-inria  ">
-            <h1 className="text-center text-8xl">Projects</h1>
+            <h1 className="text-center  2xl:text-8xl xl:text-6xl lg:text-5xl md:text-5xl sm:text-5xl">
+              Projects
+            </h1>
 
             {/* Project Grid */}
 
@@ -111,7 +114,9 @@ function App() {
 
           {/* About Section */}
           <section className="items-center justify-centertext-white text-lg font-inria my-8  ">
-            <h1 className="text-center text-8xl p-8">About Me</h1>
+            <h1 className="text-center  p-8 2xl:text-8xl xl:text-6xl lg:text-5xl md:text-5xl sm:text-5xl">
+              About Me
+            </h1>
 
             <div className="relative rounded-lg p-4 mx-auto bg-primary">
               <div className="flex justify-center items-center">
