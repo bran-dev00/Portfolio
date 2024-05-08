@@ -8,6 +8,12 @@ import { SmallProjectCard } from "./Components/Projects/SmallProjectCard";
 import { CassetteTape } from "./Components/CassetteTape/CassetteTape";
 import { ContactMe } from "./Components/ContactMe/ContactMe";
 import Disassembler from "./assets/disassembler.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faKeyboard,
+  faPlantWilt,
+  faSoap,
+} from "@fortawesome/free-solid-svg-icons";
 function App() {
   const [interestText, setInterestText] = useState("Audio Programming");
 
@@ -47,19 +53,19 @@ function App() {
         <Socials />
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-16 xl:px-16 ">
-          <header className=" border flex p-8 items-center mt-8 mb-8 gap-x-80 font-inria 2xl:gap-x-80 xl:gap-x-80 lg:gap-x-56 md:gap-x-56 ">
+          <header className=" border flex p-8 items-center mt-8 mb-8 gap-x-80 font-inria 2xl:gap-x-80 xl:gap-x-80 lg:gap-x-56 md:gap-x-44 ">
             {/* Left Text */}
 
             <div className="flex flex-col max-w-[800px] mx-auto p-8 ">
-              <h1 className=" mb-8 2xl:text-8xl xl:text-6xl lg:text-5xl md:text-5xl sm:text-5xl ">
+              <h1 className=" mb-8 2xl:text-8xl xl:text-6xl lg:text-5xl md:text-4xl sm:text-4xl ">
                 Hi there, my name is Brandon
               </h1>
 
-              <h2 className="lg:text-3xl xl:text-4xl md:text-2xl">
+              <h2 className="lg:text-3xl xl:text-4xl md:text-xl">
                 I’m a Computer Science graduate from Iowa State University
               </h2>
 
-              <h3 className="lg:text-3xl xl:text-4xl md:text-2xl mt-4  ">
+              <h3 className="lg:text-3xl xl:text-4xl md:text-xl mt-4  ">
                 I have an interest in <br />
                 Full-Stack Development and{" "}
                 <span className=" font-bold block mt-5 text-center rounded-md p-4 bg-accent text-black xl:text-3xl lg:text-xl md:text-lg sm:text-md">
@@ -72,20 +78,20 @@ function App() {
             <img
               src={HeroPicture}
               alt="graduation picture"
-              className="pt-10 lg:max-w-[300px] xl:max-w-[400px]"
+              className="py-4 lg:max-w-[300px] xl:max-w-[400px] md:max-w-[200px]"
             />
           </header>
           {/* Scroll Down */}
           {/* <div className="container mx-auto bg-accent rounded-sm motion-reduce:hidden animate-bounce ease-in-out  absolute bottom-[-50px] left-[45%] w-60 h-4 mb-5"></div> */}
 
-          <section className="text-text text-lg my-8 font-inria  ">
-            <h1 className="text-center  2xl:text-8xl xl:text-6xl lg:text-5xl md:text-5xl sm:text-5xl">
+          <section className="text-text text-lg my-16 font-inria  ">
+            <h1 className="text-center 2xl:text-8xl xl:text-6xl lg:text-5xl md:text-5xl sm:text-5xl">
               Projects
             </h1>
 
             {/* Project Grid */}
 
-            <div className="border grid grid-cols-3 gap-2 my-8 rounded-md place-items-center bg-primary">
+            <div className=" relative grid xl:grid-cols-3 xl:gap-5 lg:grid-cols-2 md:grid-cols-1 md:place-items-center  my-8 p-16 rounded-md place-items-start bg-primary">
               <SmallProjectCard
                 image={javaProject.image}
                 title={javaProject.title}
@@ -106,9 +112,21 @@ function App() {
                 stack={reactProject.stack}
                 description={reactProject.description}
               />
-              <span className="text-secondaryAccent text-xl font-bold">
-                Under Construction projects are still in development,{" "}
-              </span>
+              {/* <SmallProjectCard
+                image={reactProject.image}
+                title={reactProject.title}
+                finished={reactProject.finished}
+                stack={reactProject.stack}
+                description={reactProject.description}
+              /> */}
+              <p className="text-secondaryAccent text-xl font-bold p-4 absolute bottom-0 right-10 ">
+                Projects marked with:
+                <span className="text-white text-lg">
+                  {" "}
+                  <FontAwesomeIcon icon={faKeyboard} />{" "}
+                </span>
+                are still in development{" "}
+              </p>
             </div>
           </section>
 

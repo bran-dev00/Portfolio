@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Modal } from "../Modals/Modal";
 import ProjectDetails from "./ProjectDetails";
 import { Stack } from "./Stack";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faKeyboard } from "@fortawesome/free-solid-svg-icons";
 
 export const SmallProjectCard = ({
   image,
@@ -27,41 +29,39 @@ export const SmallProjectCard = ({
         onMouseLeave={() => setIsBannerVisible(false)}
         className="relative "
       >
-        {!finished && (
-          <div
-            className={
-              isBannerVisible
-                ? "bg-red-600 rounded-t-md text-white font-bold p-2 absolute right-14 animate-showProjectTab"
-                : "absolute right-10 top-10"
-            }
-          >
-            <p>Under Construction</p>
-          </div>
-        )}
+        <div className="bg-black font-bold transition-all ease-in-out border-accent/50 border-[2px] text-accent flex flex-col justify-center text-start relative rounded-md m-4 hover:scale-95 w-80 min-h-[300px] max-h-[300px]">
+          {!finished && (
+            <div
+              className={
+                "flex justify-center items-center rotate-90 bg-black rounded-t-md text-white border-accent/50 border-2 font-bold p-2 absolute right-[-57px] bottom-10 h-8 w-20 text-center"
+              }
+            >
+              <FontAwesomeIcon className="text-white" icon={faKeyboard} />{" "}
+            </div>
+          )}
 
-        <div className=" flex flex-col relative hover:scale-95 transition-transform m-8 ">
-          <a href="#" className="hover:scale-100">
+          <a href="#" className="overflow-hidden ">
             <img
-              className="min-h-[200px] w-fit h-fit rounded-tr-md rounded-tl-md"
+              className=" object-cover w-full h-48 "
               src={image}
               alt={altDescription}
             />
           </a>
 
-          <div className="bg-secondary/50 text-white p-5 rounded-br-md rounded-bl-md">
-            <h1 className="text-white font-bold text-3xl py-2">{title}</h1>
-            <div className="flex gap-4 py-2 font-bold">
-              <span className="text-white text-2xl">Stack:</span>
-
+          <div className=" p-4 rounded-br-md rounded-bl-md">
+            <h1 className=" text-lg lg:text-xl mb-2">{title}</h1>
+            <div className="flex gap-4 font-bold items-center">
+              <span className="text-white text-xl">Stack:</span>
               <Stack stack={stack} />
             </div>
-            <button
-              onClick={toggleModal}
-              className="bg-emerald-400 p-2 m-2 rounded-md"
-            >
-              More Details
-            </button>
           </div>
+
+          <button
+            onClick={toggleModal}
+            className="bg-emerald-400 p-2 m-2 rounded-md text-black font-bold max-w-full max-h-fit"
+          >
+            More Details
+          </button>
         </div>
         <Modal open={isModalOpen} onClose={toggleModal}>
           {/* Every Project has these same attributes, then have a custom children prop to fill in differences in layout and */}
