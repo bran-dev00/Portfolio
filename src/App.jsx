@@ -91,7 +91,7 @@ function App() {
 
             {/* Project Grid */}
 
-            <div className=" relative grid xl:grid-cols-3 xl:gap-5 lg:grid-cols-2 md:grid-cols-1 md:place-items-center  my-8 p-16 rounded-md place-items-start bg-primary">
+            <div className=" min-h-[650px] relative grid xl:grid-cols-3 xl:gap-14 lg:grid-cols-2 md:grid-cols-1 md:place-items-center  my-8 p-16 rounded-md place-items-start bg-primary">
               <SmallProjectCard
                 image={javaProject.image}
                 title={javaProject.title}
@@ -131,21 +131,21 @@ function App() {
           </section>
 
           {/* About Section */}
-          <section className="items-center justify-centertext-white text-lg font-inria my-8  ">
+          <section className="items-center justify-centertext-white text-lg font-inria my-8 min-h-screen ">
             <h1 className="text-center  p-8 2xl:text-8xl xl:text-6xl lg:text-5xl md:text-5xl sm:text-5xl">
               About Me
             </h1>
 
             <div className="relative rounded-lg p-4 mx-auto bg-primary">
-              <div className="flex justify-center items-center">
+              <div className="flex justify-center items-center ">
                 <div className="">
                   {/* Fix Dimensions */}
                   <CassetteTape />
                 </div>
 
-                <div className="flex flex-col max-w-[800px] max-h-[628px] bg-[#9E1829]   my-8 p-8 items-center ">
+                <div className="flex flex-col max-w-[800px] min-h-[650px]  bg-[#9E1829] p-8 items-center ">
                   <img
-                    className="object-contain max-w-[300px] max-h-[300px] mb-8 rounded-lg "
+                    className="object-contain max-w-[300px] max-h-[250px] mb-8 rounded-lg "
                     src={GradPicture}
                     alt="My Graduation Picture"
                   />

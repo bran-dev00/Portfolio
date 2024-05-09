@@ -88,41 +88,42 @@ export const CassetteTape = () => {
   };
 
   return (
-    <div className=" text-text font-bold bg-secondary p-5 my-5 items-center">
-      <div className="position relative flex flex-col">
-        <img src={cassetteTape} alt="cassette tape" />
-
-        <div>
-          <img
-            className={
-              isPlaying
-                ? "absolute top-[68px] left-[70px] animate-spin"
-                : "absolute top-[68px] left-[70px]"
-            }
-            src={spoolLeft}
-            alt="cassette spool"
-          />
-          <img
-            className={
-              isPlaying
-                ? "absolute top-[68px] right-[70px] animate-spin"
-                : "absolute top-[68px] right-[70px]"
-            }
-            src={spoolLeft}
-            alt="cassette spool"
-          />
+    <div className=" text-text font-bold  bg-secondary p-5 my-5 min-h-[650px]">
+      <div className="flex flex-col items-center justify-center">
+        {/* CasseteTape and Spools */}
+        <div className="relative">
+          <img src={cassetteTape} alt="cassette tape" />
+          <div>
+            <img
+              className={
+                isPlaying
+                  ? "absolute top-[58px] left-[60px] animate-spin"
+                  : "absolute top-[58px] left-[60px]"
+              }
+              src={spoolLeft}
+              alt="cassette spool"
+            />
+            <img
+              className={
+                isPlaying
+                  ? "absolute top-[58px] right-[60px] animate-spin"
+                  : "absolute top-[58px] right-[60px]"
+              }
+              src={spoolLeft}
+              alt="cassette spool"
+            />
+          </div>
         </div>
 
+        {/*Audio Element*/}
         <audio ref={audioElem} src={testSong}></audio>
 
-        {/*Audio Container*/}
-
-        {/* Control Buttons */}
+        {/* Control Buttons Container */}
         <div className=" bg-background/40 border-2 rounded-lg p-5 my-3 relative flex flex-col justify-center items-center">
           <a className="text-center" href="#">
             View Transcript
           </a>
-          <div className="w-[300px] flex flex-col justify-center items-center  my-5 p-2 rounded-md">
+          <div className="flex flex-col justify-center items-center my-4 p-2 rounded-md">
             {/* Progress Bar */}
             <div>
               {/* <label htmlFor="progressBar">Seek:</label> */}
