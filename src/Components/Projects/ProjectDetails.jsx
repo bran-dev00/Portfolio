@@ -11,14 +11,30 @@ const ProjectDetails = ({ title, description, img, stack, onClose }) => {
     "https://images.pexels.com/photos/3769167/pexels-photo-3769167.jpeg?auto=compress&cs=tinysrgb&w=600",
   ];
 
+  const openInNewWindow = (url) => {
+    window.open(url, "_blank", "noreferrer");
+  };
+
   return (
     <div className="container relative min-w-[80vw] flex flex-col justify-center bg-primary mx-auto min-h-screen ">
-      <h1 className="  text-7xl py-8 text-center">{title}</h1>
+      <button
+        className="bg-accent m-8 font-bold font-poppins text-black w-32 h-10 rounded-lg"
+        onClick={onClose}
+      >
+        Close
+      </button>
+
+      <h1 className=" xl:text-6xl lg:text-5xl md:text-4xl sm:text-2xl p-8 text-center">
+        {title}
+      </h1>
 
       <div className="flex flex-col justify-center items-center gap-4">
         <ImageCarousel items={items} />
 
-        <button className="bg-secondaryRed text-text font-bold p-4 rounded-lg flex gap-4">
+        <button
+          onClick={() => openInNewWindow("https://github.com/")}
+          className="bg-secondaryRed text-text font-bold p-4 rounded-lg flex gap-4"
+        >
           View Code <FontAwesomeIcon className={"fa-xl"} icon={faGithub} />
         </button>
       </div>
@@ -31,7 +47,7 @@ const ProjectDetails = ({ title, description, img, stack, onClose }) => {
               <span>Stack:</span>
               <Stack stack={stack} />
             </div>
-            <h2 className="text-left text-secondaryAccent text-3xl font-bold py-4">
+            <h2 className="text-left text-secondaryAccent lg:text-3xl md:text-2xl sm:text-xl font-bold py-4">
               Project Description{" "}
             </h2>
             <p className=" text-text text-xl font-poppins overflow-y-auto ">
@@ -40,13 +56,6 @@ const ProjectDetails = ({ title, description, img, stack, onClose }) => {
           </div>
         </div>
       </div>
-
-      <button
-        className="bg-accent absolute top-10 left-5 font-bold font-poppins text-black w-32 h-10 rounded-lg"
-        onClick={onClose}
-      >
-        Close
-      </button>
     </div>
   );
 };

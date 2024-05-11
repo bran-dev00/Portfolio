@@ -48,27 +48,30 @@ function App() {
 
   return (
     <>
-      <div className="bg-background text-text relative  ">
+      <div className="relative bg-background text-text">
         <Navbar />
         <Socials />
 
-        <div className="container mx-auto px-4 sm:px-6 lg:px-16 xl:px-16 ">
-          <header className=" border flex p-8 items-center mt-8 mb-8 gap-x-80 font-inria 2xl:gap-x-80 xl:gap-x-80 lg:gap-x-56 md:gap-x-44 ">
+        <div className="container p-4 mx-auto border sm:border-red-500 md:border-green-500 lg:border-blue-500 xl:border-purple-500 sm:px-6 lg:px-16">
+          <header className="flex items-center p-4 my-16 border font-inria sm:gap-x-5">
             {/* Left Text */}
 
-            <div className="flex flex-col max-w-[800px] mx-auto p-8 ">
-              <h1 className=" mb-8 2xl:text-8xl xl:text-6xl lg:text-5xl md:text-4xl sm:text-4xl ">
+            <div className="flex flex-col p-8 mx-auto ">
+              <h1 className="mb-8 text-5xl font-bold sm:text-4xl md:text-5xl lg:text-8xl text-text ">
                 Hi there, my name is Brandon
               </h1>
 
-              <h2 className="lg:text-3xl xl:text-4xl md:text-xl">
-                I’m a Computer Science graduate from Iowa State University
+              <h2 className="text-3xl lg:text-4xl sm:text-2xl">
+                I’m a Computer Science graduate from{" "}
+                <span className="font-bold text-secondaryAccent">
+                  Iowa State University
+                </span>
               </h2>
 
-              <h3 className="lg:text-3xl xl:text-4xl md:text-xl mt-4  ">
+              <h3 className="mt-4 text-3xl lg:text-4xl">
                 I have an interest in <br />
                 Full-Stack Development and{" "}
-                <span className=" font-bold block mt-5 text-center rounded-md p-4 bg-accent text-black xl:text-3xl lg:text-xl md:text-lg sm:text-md">
+                <span className="block p-4 mt-5 font-bold text-center text-black rounded-md bg-accent xl:text-3xl lg:text-xl md:text-lg sm:text-md">
                   {interestText}
                 </span>
               </h3>
@@ -78,13 +81,13 @@ function App() {
             <img
               src={HeroPicture}
               alt="graduation picture"
-              className="py-4 lg:max-w-[300px] xl:max-w-[400px] md:max-w-[200px]"
+              className="p-4  hidden sm:block 2xl:max-w-fit lg:min-w-[300px] xl:min-w-[400px] md:max-w-[200px] sm:w-52 w-40 "
             />
           </header>
           {/* Scroll Down */}
           {/* <div className="container mx-auto bg-accent rounded-sm motion-reduce:hidden animate-bounce ease-in-out  absolute bottom-[-50px] left-[45%] w-60 h-4 mb-5"></div> */}
 
-          <section className="text-text text-lg my-16 font-inria  ">
+          <section className="my-16 text-lg text-text font-inria ">
             <h1 className="text-center 2xl:text-8xl xl:text-6xl lg:text-5xl md:text-5xl sm:text-5xl">
               Projects
             </h1>
@@ -119,9 +122,9 @@ function App() {
                 stack={reactProject.stack}
                 description={reactProject.description}
               /> */}
-              <p className="text-secondaryAccent text-xl font-bold p-4 absolute bottom-0 right-10 ">
+              <p className="absolute bottom-0 p-4 text-xl font-bold text-secondaryAccent right-10 ">
                 Projects marked with:
-                <span className="text-white text-lg">
+                <span className="text-lg text-white">
                   {" "}
                   <FontAwesomeIcon icon={faKeyboard} />{" "}
                 </span>
@@ -131,13 +134,13 @@ function App() {
           </section>
 
           {/* About Section */}
-          <section className="items-center justify-centertext-white text-lg font-inria my-8 min-h-screen ">
-            <h1 className="text-center  p-8 2xl:text-8xl xl:text-6xl lg:text-5xl md:text-5xl sm:text-5xl">
+          <section className="items-center my-16 text-lg justify-centertext-white font-inria ">
+            <h1 className="p-8 text-center 2xl:text-8xl xl:text-6xl lg:text-5xl md:text-5xl sm:text-5xl">
               About Me
             </h1>
 
-            <div className="relative rounded-lg p-4 mx-auto bg-primary">
-              <div className="flex justify-center items-center ">
+            <div className="relative p-4 mx-auto rounded-lg bg-primary">
+              <div className="flex items-center justify-center ">
                 <div className="">
                   {/* Fix Dimensions */}
                   <CassetteTape />
@@ -161,7 +164,7 @@ function App() {
             </div>
           </section>
 
-          <section className="my-16">
+          <section className="my-16 ">
             <ContactMe />
           </section>
         </div>

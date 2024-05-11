@@ -24,7 +24,7 @@ export const SmallProjectCard = ({
 
   return (
     <>
-      <div className="bg-black font-bold transition-all ease-in-out border-accent/50 border-[2px] text-accent flex flex-col justify-center text-start relative rounded-md m-4 hover:scale-95 w-80 min-h-[300px] max-h-[300px]">
+      <div className="bg-black/20 shadow-sm shadow-white font-bold transition-all ease-in-out  text-accent flex flex-col justify-center text-start relative rounded-md m-4 hover:scale-95 w-80 min-h-[350px] max-h-[350px]">
         {!finished && (
           <div
             className={
@@ -58,6 +58,7 @@ export const SmallProjectCard = ({
           More Details
         </button>
       </div>
+
       <Modal open={isModalOpen} onClose={toggleModal}>
         {/* Every Project has these same attributes, then have a custom children prop to fill in differences in layout and */}
         <ProjectDetails
