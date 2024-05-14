@@ -88,7 +88,7 @@ export const CassetteTape = () => {
   };
 
   return (
-    <div className=" text-text font-bold  bg-secondary p-5 my-5 min-h-[650px]">
+    <div className="p-4 font-bold text-text bg-secondary h-[100%] sm:rounded-b-md md:rounded-r-md">
       <div className="flex flex-col items-center justify-center">
         {/* CasseteTape and Spools */}
         <div className="relative">
@@ -119,11 +119,11 @@ export const CassetteTape = () => {
         <audio ref={audioElem} src={testSong}></audio>
 
         {/* Control Buttons Container */}
-        <div className=" bg-background/40 border-2 rounded-lg p-5 my-3 relative flex flex-col justify-center items-center">
+        <div className="relative flex flex-col items-center justify-center p-5 my-3 border-2 rounded-lg bg-background/40">
           <a className="text-center" href="#">
             View Transcript
           </a>
-          <div className="flex flex-col justify-center items-center my-4 p-2 rounded-md">
+          <div className="flex flex-col items-center justify-center p-2 my-4 rounded-md">
             {/* Progress Bar */}
             <div>
               {/* <label htmlFor="progressBar">Seek:</label> */}

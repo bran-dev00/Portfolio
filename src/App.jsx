@@ -19,7 +19,8 @@ function App() {
 
   // Test:
   const javaProject = {
-    image: Disassembler,
+    image:
+      "https://images.unsplash.com/photo-1715514894643-aedb49942811?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     imgAltDescription: "placeholder",
     title: "Assembly Dissasembler",
     finished: true,
@@ -48,16 +49,16 @@ function App() {
 
   return (
     <>
-      <div className="relative bg-background text-text">
+      <div className="relative text-white bg-background">
         <Navbar />
         <Socials />
 
-        <div className="container p-4 mx-auto border sm:border-red-500 md:border-green-500 lg:border-blue-500 xl:border-purple-500 sm:px-6 lg:px-16">
-          <header className="flex items-center p-4 my-16 border font-inria sm:gap-x-5">
+        <div className="container p-4 mx-auto border-none sm:border-red-500 md:border-green-500 lg:border-blue-500 xl:border-purple-500 sm:px-6 lg:px-16">
+          <header className="flex border items-center p-4 my-16  font-inria sm:gap-x-4 md:gap-x-5 xl:gap-x-40 lg:h-[80vh]">
             {/* Left Text */}
 
-            <div className="flex flex-col p-8 mx-auto ">
-              <h1 className="mb-8 text-5xl font-bold sm:text-4xl md:text-5xl lg:text-8xl text-text ">
+            <div className="flex flex-col p-8 mx-auto">
+              <h1 className="mb-8 text-5xl font-bold text-white sm:text-4xl md:text-5xl lg:text-8xl ">
                 Hi there, my name is Brandon
               </h1>
 
@@ -71,7 +72,7 @@ function App() {
               <h3 className="mt-4 text-3xl lg:text-4xl">
                 I have an interest in <br />
                 Full-Stack Development and{" "}
-                <span className="block p-4 mt-5 font-bold text-center text-black rounded-md bg-accent xl:text-3xl lg:text-xl md:text-lg sm:text-md">
+                <span className="block p-4 my-5 text-sm font-bold text-center text-black rounded-md bg-accent xl:text-3xl lg:text-xl md:text-lg sm:text-md">
                   {interestText}
                 </span>
               </h3>
@@ -87,14 +88,14 @@ function App() {
           {/* Scroll Down */}
           {/* <div className="container mx-auto bg-accent rounded-sm motion-reduce:hidden animate-bounce ease-in-out  absolute bottom-[-50px] left-[45%] w-60 h-4 mb-5"></div> */}
 
-          <section className="my-16 text-lg text-text font-inria ">
-            <h1 className="text-center 2xl:text-8xl xl:text-6xl lg:text-5xl md:text-5xl sm:text-5xl">
+          <section className="my-16 text-lg text-white font-inria ">
+            <h1 className="text-5xl font-bold text-center 2xl:text-8xl xl:text-6xl lg:text-5xl md:text-5xl sm:text-5xl">
               Projects
             </h1>
 
             {/* Project Grid */}
 
-            <div className=" min-h-[650px] relative grid xl:grid-cols-3 xl:gap-14 lg:grid-cols-2 md:grid-cols-1 md:place-items-center  my-8 p-16 rounded-md place-items-start bg-primary">
+            <div className="relative flex flex-col items-center justify-center p-2 mx-auto my-8 overflow-auto rounded-md sm:border lg:placeitemsce sm:place-items-center sm:grid place-items-start md:grid-cols-2 xl:grid-cols-3 xl:gap-14 lg:grid-cols-2 lg:place-items-center ">
               <SmallProjectCard
                 image={javaProject.image}
                 title={javaProject.title}
@@ -115,14 +116,15 @@ function App() {
                 stack={reactProject.stack}
                 description={reactProject.description}
               />
-              {/* <SmallProjectCard
-                image={reactProject.image}
-                title={reactProject.title}
-                finished={reactProject.finished}
-                stack={reactProject.stack}
-                description={reactProject.description}
-              /> */}
-              <p className="absolute bottom-0 p-4 text-xl font-bold text-secondaryAccent right-10 ">
+              <SmallProjectCard
+                image={javaProject.image}
+                title={javaProject.title}
+                finished={javaProject.finished}
+                stack={javaProject.stack}
+                description={javaProject.description}
+              />
+
+              <p className="p-4 text-sm font-bold block max-w-[100vw] sm:bottom-0  sm:text-xl  text-secondaryAccent sm:right-10 ">
                 Projects marked with:
                 <span className="text-lg text-white">
                   {" "}
@@ -134,21 +136,17 @@ function App() {
           </section>
 
           {/* About Section */}
-          <section className="items-center my-16 text-lg justify-centertext-white font-inria ">
-            <h1 className="p-8 text-center 2xl:text-8xl xl:text-6xl lg:text-5xl md:text-5xl sm:text-5xl">
+          <section className="my-16 overflow-auto text-white scroll-auto">
+            <h1 className="p-8 font-bold text-center font-inria 2xl:text-8xl xl:text-6xl lg:text-5xl md:text-5xl sm:text-5xl">
               About Me
             </h1>
 
-            <div className="relative p-4 mx-auto rounded-lg bg-primary">
-              <div className="flex items-center justify-center ">
-                <div className="">
-                  {/* Fix Dimensions */}
-                  <CassetteTape />
-                </div>
-
-                <div className="flex flex-col max-w-[800px] min-h-[650px]  bg-[#9E1829] p-8 items-center ">
+            <div className="relative flex flex-col items-center p-4 mx-auto ">
+              <div className="ml-5 md:flex ">
+                {/* Fix Dimensions */}
+                <div className="flex flex-col bg-[#9E1829] p-8 items-center sm:rounded-r-none sm:rounded-t-md md:rounded-l-md md:rounded-tr-none ">
                   <img
-                    className="object-contain max-w-[300px] max-h-[250px] mb-8 rounded-lg "
+                    className="object-contain max-w-[300px] max-h-[250px] mb-8"
                     src={GradPicture}
                     alt="My Graduation Picture"
                   />
@@ -159,6 +157,10 @@ function App() {
                     praesentium voluptatem nemo vero obcaecati consequuntur
                     minus!
                   </p>
+                </div>
+
+                <div className="hidden sm:block">
+                  <CassetteTape />
                 </div>
               </div>
             </div>
