@@ -5,13 +5,13 @@ import stopBtn from "../../assets/stopBtn.svg";
 import pauseBtn from "../../assets/pauseBtn.svg";
 import minusBtn from "../../assets/minusBtn.png";
 import plusBtn from "../../assets/plusBtn.png";
-import testSong from "../../assets/testSong.wav";
+import introductionAudio from "../../assets/Introduction.wav";
 import { useState, useRef, useEffect } from "react";
 
 export const CassetteTape = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
-  const [duration, setDuration] = useState(0);
+  const [duration, setDuration] = useState(167);
 
   const audioElem = useRef();
   const progressBar = useRef();
@@ -88,7 +88,7 @@ export const CassetteTape = () => {
   };
 
   return (
-    <div className="p-4 font-bold text-text bg-secondary h-[100%] sm:rounded-b-md md:rounded-r-md">
+    <div className="p-4 font-bold text-text bg-secondary h-[100%] sm:rounded-b-md md:rounded-b-none md:rounded-tr-md md:rounded-br-md">
       <div className="flex flex-col items-center justify-center">
         {/* CasseteTape and Spools */}
         <div className="relative">
@@ -116,7 +116,7 @@ export const CassetteTape = () => {
         </div>
 
         {/*Audio Element*/}
-        <audio ref={audioElem} src={testSong}></audio>
+        <audio ref={audioElem} src={introductionAudio}></audio>
 
         {/* Control Buttons Container */}
         <div className="relative flex flex-col items-center justify-center p-5 my-3 border-2 rounded-lg bg-background/40">
@@ -151,7 +151,7 @@ export const CassetteTape = () => {
             {/* Current Time  */}
             <div className="text-center">
               {formatTime(currentTime)}/{" "}
-              {duration ? formatTime(duration) : `00:00`}
+              {duration ? formatTime(duration) : `02:47`}
             </div>
           </div>
 

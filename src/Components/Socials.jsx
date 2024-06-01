@@ -18,9 +18,6 @@ export const Socials = () => {
       <a className="fa-xl" href="#">
         <FontAwesomeIcon icon={faCodepen} />
       </a>
-      <a className="fa-xl" href="#">
-        <FontAwesomeIcon icon={faEnvelope} />
-      </a>
     </div>
   );
 };

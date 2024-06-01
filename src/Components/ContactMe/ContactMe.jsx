@@ -10,18 +10,18 @@ export const ContactMe = () => {
   return (
     <div>
       <div className="container flex flex-col items-center justify-center p-8 mx-auto my-8 text-black rounded-lg ">
-        <h1 className="text-xl font-bold text-center text-white lg:text-6xl sm:text-4xl">
+        <h1 className="font-[Indria] text-5xl font-bold text-center text-white lg:text-6xl sm:text-4xl">
           Get in touch with me
         </h1>
 
-        <h2 className="font-bold text-center md:text-3xl text-accent">
+        <h2 className="text-3xl font-bold text-center text-accent">
           Thanks again for visiting!
         </h2>
 
         <form
           action="submit"
           onSubmit={handleSubmit}
-          className="  text-black flex flex-col justify-center gap-4 p-4 mt-5 xl:w-[70%] w-[100%] sm:w-[90%] md:w-[90%] "
+          className="  text-black flex flex-col justify-center gap-4 p-4 mt-5 xl:w-[50%] w-[100%] sm:w-[90%] md:w-[90%] "
         >
           <input type="checkbox" name="botcheck" className="hidden"></input>
           <input

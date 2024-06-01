@@ -4,57 +4,33 @@ import HeroPicture from "./assets/SkillsHoneyComb.png";
 import GradPicture from "./assets/GraduationPicture.png";
 import Footer from "./Components/Footer/Footer";
 import { Socials } from "./Components/socials";
-import { SmallProjectCard } from "./Components/Projects/SmallProjectCard";
+import { SmallProjectCard } from "./Components/ProjectCard/SmallProjectCard";
 import { CassetteTape } from "./Components/CassetteTape/CassetteTape";
 import { ContactMe } from "./Components/ContactMe/ContactMe";
-import Disassembler from "./assets/disassembler.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faKeyboard,
-  faPlantWilt,
-  faSoap,
-} from "@fortawesome/free-solid-svg-icons";
+import { faKeyboard } from "@fortawesome/free-solid-svg-icons";
+import { javaProject, reactProject, pokemonProject } from "./projects";
 function App() {
   const [interestText, setInterestText] = useState("Audio Programming");
 
+  const interests = [
+    "Audio Programming",
+    "Music",
+    "Game Development",
+    "Art",
+    "Much Much More!",
+  ];
+
   // Test:
-  const javaProject = {
-    image:
-      "https://images.unsplash.com/photo-1715514894643-aedb49942811?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    imgAltDescription: "placeholder",
-    title: "Assembly Dissasembler",
-    finished: true,
-    stack: ["java"],
-    description:
-      "For my computer architecture class we were tasked to write a dissasembler in java that takes some machine code and converts it to assembly instructions.",
-  };
-
-  const reactProject = {
-    image:
-      "https://img.freepik.com/free-photo/portrait-adorable-cavapoo-dog-holding-tennis-ball-park-sunny-day_181624-59516.jpg?t=st=1713199924~exp=1713203524~hmac=0c3853ead18e9ca1a3940aefb912055fbaf70a500f6976c79b18588d4e3d7801&w=1380",
-    imgAltDescription: "placeholder",
-    title: "Steam Roll",
-    finished: false,
-    stack: ["javascript", "react", "node"],
-    description:
-      "This project is currently still in development, but I am building a web app that chooses a random game from your steam library. Why? Well over the years many people probably have ammased a large collection of games in their steam library's from the mutliple steam sales in the year, so people can get analysis paralysis or too overwhelmed on what game to play that they don't play anthing.This project is currently still in development, but I am building a web app that chooses a random game from your steam library. Why? Well over the years many people probably have ammased a large collection of games in their steam library's from the mutliple steam sales in the year, so people can get analysis paralysis or too overwhelmed on what game to play that they don't play anthing.This project is currently still in development, but I am building a web app that chooses a random game from your steam library. Why? Well over the years many people probably have ammased a large collection of games in their steam library's from the mutliple steam sales in the year, so people can get analysis paralysis or too overwhelmed on what game to play that they don't play anthing. This project is currently still in development, but I am building a web app that chooses a random game from your steam library. Why? Well over the years many people probably have ammased a large collection of games in their steam library's from the mutliple steam sales in the year, so people can get analysis paralysis or too overwhelmed on what game to play that they don't play anthing This project is currently still in development, but I am building a web app This project is currently still in development, but I am building a web app.",
-  };
-
-  const pokemonProject = {
-    title: "ASCII Pokemon Console Game",
-    image: Disassembler,
-    finished: false,
-    stack: ["cpp", "c"],
-  };
 
   return (
     <>
-      <div className="relative text-white bg-background">
+      <div className="relative text-white bg-background scroll-smooth">
         <Navbar />
         <Socials />
 
         <div className="container p-4 mx-auto border-none sm:border-red-500 md:border-green-500 lg:border-blue-500 xl:border-purple-500 sm:px-6 lg:px-16">
-          <header className="flex border items-center p-4 my-16  font-inria sm:gap-x-4 md:gap-x-5 xl:gap-x-40 lg:h-[80vh]">
+          <header className="flex border items-center p-4 mb-16 font-inria sm:gap-x-4 md:gap-x-5 xl:gap-x-40 lg:h-[80vh]">
             {/* Left Text */}
 
             <div className="flex flex-col p-8 mx-auto">
@@ -85,17 +61,18 @@ function App() {
               className="p-4  hidden sm:block 2xl:max-w-fit lg:min-w-[300px] xl:min-w-[400px] md:max-w-[200px] sm:w-52 w-40 "
             />
           </header>
-          {/* Scroll Down */}
-          {/* <div className="container mx-auto bg-accent rounded-sm motion-reduce:hidden animate-bounce ease-in-out  absolute bottom-[-50px] left-[45%] w-60 h-4 mb-5"></div> */}
 
           <section className="my-16 text-lg text-white font-inria ">
-            <h1 className="text-5xl font-bold text-center 2xl:text-8xl xl:text-6xl lg:text-5xl md:text-5xl sm:text-5xl">
+            <h1
+              id="project-section"
+              className="text-5xl font-bold text-center 2xl:text-8xl xl:text-6xl lg:text-5xl md:text-5xl sm:text-5xl"
+            >
               Projects
             </h1>
 
             {/* Project Grid */}
 
-            <div className="relative flex flex-col items-center justify-center p-2 mx-auto my-8 overflow-auto rounded-md sm:border lg:placeitemsce sm:place-items-center sm:grid place-items-start md:grid-cols-2 xl:grid-cols-3 xl:gap-14 lg:grid-cols-2 lg:place-items-center ">
+            <div className="relative flex flex-col items-center justify-center px-2 py-8 my-8 overflow-auto rounded-md mx- auto md:pb-16 sm:border lg:placeitemsce sm:place-items-center sm:grid place-items-start md:grid-cols-2 xl:grid-cols-3 lg:grid-cols-2 lg:place-items-center ">
               <SmallProjectCard
                 image={javaProject.image}
                 title={javaProject.title}
@@ -108,6 +85,7 @@ function App() {
                 title={pokemonProject.title}
                 image={pokemonProject.image}
                 stack={pokemonProject.stack}
+                description={pokemonProject.description}
               />
               <SmallProjectCard
                 image={reactProject.image}
@@ -116,15 +94,8 @@ function App() {
                 stack={reactProject.stack}
                 description={reactProject.description}
               />
-              <SmallProjectCard
-                image={javaProject.image}
-                title={javaProject.title}
-                finished={javaProject.finished}
-                stack={javaProject.stack}
-                description={javaProject.description}
-              />
 
-              <p className="p-4 text-sm font-bold block max-w-[100vw] sm:bottom-0  sm:text-xl  text-secondaryAccent sm:right-10 ">
+              <p className="p-4 text-sm font-bold block max-w-[100vw]   sm:text-xl  text-secondaryAccent lg:absolute lg:bottom-2 lg:right-10 ">
                 Projects marked with:
                 <span className="text-lg text-white">
                   {" "}
@@ -136,26 +107,35 @@ function App() {
           </section>
 
           {/* About Section */}
-          <section className="my-16 overflow-auto text-white scroll-auto">
-            <h1 className="p-8 font-bold text-center font-inria 2xl:text-8xl xl:text-6xl lg:text-5xl md:text-5xl sm:text-5xl">
+          <section id="about-section" className="mb-20 text-white ">
+            <h1 className="p-8 text-5xl font-bold text-center font-inria 2xl:text-8xl xl:text-6xl lg:text-5xl md:text-5xl sm:text-5xl">
               About Me
             </h1>
 
-            <div className="relative flex flex-col items-center p-4 mx-auto ">
-              <div className="ml-5 md:flex ">
+            <div className="relative items-center max-h-screen p-4 mx-auto overflow-auto scroll-auto ">
+              <div className="ml-5 lg:flex ">
                 {/* Fix Dimensions */}
-                <div className="flex flex-col bg-[#9E1829] p-8 items-center sm:rounded-r-none sm:rounded-t-md md:rounded-l-md md:rounded-tr-none ">
+                <div className="flex flex-col items-center p-8 bg-secondaryRed/90 sm:rounded-r-none sm:rounded-t-md md:rounded-l-md md:rounded-tr-none ">
                   <img
-                    className="object-contain max-w-[300px] max-h-[250px] mb-8"
+                    className="object-contain max-w-[500px] max-h-[300px] mb-8"
                     src={GradPicture}
                     alt="My Graduation Picture"
                   />
-                  <p className="">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Eum exercitationem doloribus sunt aperiam accusamus, numquam
-                    animi, odio ipsam nesciunt amet, eaque rerum facilis
-                    praesentium voluptatem nemo vero obcaecati consequuntur
-                    minus!
+                  <p className="px-8 font-sans font-bold text-white md:text-lg xl:text-xl">
+                    Hi, My name is Brandon, I'm a new computer science graduate
+                    from Iowa State University, and I'm eager to finally get
+                    started working in a professional setting. <br /> <br />I
+                    have many interest both in computer science and outside of
+                    computer science. And writing software allows me to combine
+                    some of my interests and come up with flexible and creative
+                    solutions. <br /> <br /> Software is in almost everything we
+                    do now and with enough effort, time, and practice you can
+                    build almost anything. The barrier to entry is also smaller
+                    than many other disciplines, that's not to say that it's not
+                    challenging it can be extremely frustrating at times but
+                    that's also what makes it extremely rewarding. <br />
+                    <br /> I'm always trying to learn and improve so if you have
+                    any feedback please feel free to contact me anytime!
                   </p>
                 </div>
 
@@ -166,7 +146,7 @@ function App() {
             </div>
           </section>
 
-          <section className="my-16 ">
+          <section id="contact-section" className="">
             <ContactMe />
           </section>
         </div>
