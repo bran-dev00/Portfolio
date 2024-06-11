@@ -10,19 +10,8 @@ import { ContactMe } from "./Components/ContactMe/ContactMe";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faKeyboard } from "@fortawesome/free-solid-svg-icons";
 import { javaProject, reactProject, pokemonProject } from "./projects";
+import { ChangingSign } from "./Components/ChangingSign";
 function App() {
-  const [interestText, setInterestText] = useState("Audio Programming");
-
-  const interests = [
-    "Audio Programming",
-    "Music",
-    "Game Development",
-    "Art",
-    "Much Much More!",
-  ];
-
-  // Test:
-
   return (
     <>
       <div className="relative text-white bg-background scroll-smooth">
@@ -47,11 +36,10 @@ function App() {
 
               <h3 className="mt-4 text-3xl lg:text-4xl">
                 I have an interest in <br />
-                Full-Stack Development and{" "}
-                <span className="block p-4 my-5 text-sm font-bold text-center text-black rounded-md bg-accent xl:text-3xl lg:text-xl md:text-lg sm:text-md">
-                  {interestText}
-                </span>
+                Full-Stack Development and
               </h3>
+
+              <ChangingSign />
             </div>
 
             {/* Right Image */}
