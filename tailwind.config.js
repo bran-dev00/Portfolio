@@ -18,6 +18,7 @@ export default {
       fontFamily: {
         inria: ["inria", "serif"],
         poppins: ["Poppins", "Sans-Serif"],
+        workSans: ["workSans"],
       },
       animation: {
         showProjectTab: "showProjectTab 650ms ",

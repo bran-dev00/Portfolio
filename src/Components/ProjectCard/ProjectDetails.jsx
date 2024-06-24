@@ -3,14 +3,14 @@ import { Stack } from "./Stack";
 import { faGit, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { ImageCarousel } from "../Carousel/ImageCarousel";
 
-const ProjectDetails = ({ title, description, img, stack, onClose }) => {
-  const items = [
-    "https://images.pexels.com/photos/1000366/pexels-photo-1000366.jpeg",
-    "https://images.pexels.com/photos/4238994/pexels-photo-4238994.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "https://images.pexels.com/photos/4033321/pexels-photo-4033321.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "https://images.pexels.com/photos/3769167/pexels-photo-3769167.jpeg?auto=compress&cs=tinysrgb&w=600",
-  ];
-
+const ProjectDetails = ({
+  title,
+  description,
+  screenshots,
+  stack,
+  onClose,
+  codeLink,
+}) => {
   // const items = [];
 
   const openInNewWindow = (url) => {
@@ -37,19 +37,13 @@ const ProjectDetails = ({ title, description, img, stack, onClose }) => {
         Close
       </button>
 
-      <h1 className="p-8 text-center xl:text-6xl lg:text-5xl md:text-4xl sm:text-2xl">
-        {title}
-      </h1>
-
-      <div className="flex flex-col items-center justify-center gap-4">
-        {items.length > 0 ? (
-          <ImageCarousel items={items} />
-        ) : (
-          <div className="hidden"></div>
-        )}
+      <div className="flex flex-col items-center justify-center">
+        <h1 className="p-8 text-center xl:text-6xl lg:text-5xl md:text-4xl sm:text-2xl">
+          {title}
+        </h1>
 
         <button
-          onClick={() => openInNewWindow("https://github.com/")}
+          onClick={() => openInNewWindow(codeLink)}
           className="flex gap-4 p-4 font-bold rounded-lg bg-secondaryRed text-text"
         >
           View Code <FontAwesomeIcon className={"fa-xl"} icon={faGithub} />
@@ -72,6 +66,13 @@ const ProjectDetails = ({ title, description, img, stack, onClose }) => {
               {/* <ProjectDescription description={description} /> */}
             </p>
           </div>
+        </div>
+        <div className="flex flex-col items-center justify-center gap-4">
+          {screenshots?.length > 0 ? (
+            <ImageCarousel items={screenshots} />
+          ) : (
+            <div className="hidden"></div>
+          )}
         </div>
       </div>
     </div>

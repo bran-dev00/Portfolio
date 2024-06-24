@@ -11,11 +11,10 @@ export const SmallProjectCard = ({
   altDescription,
   finished,
   stack,
+  screenshots,
   description,
+  codeLink,
 }) => {
-  // Under Construction Banner is
-  const [isBannerVisible, setIsBannerVisible] = useState(false);
-
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const toggleModal = () => {
@@ -36,13 +35,13 @@ export const SmallProjectCard = ({
           </div>
         )}
 
-        <a href="#" className="overflow-hidden ">
+        <button onClick={toggleModal} className="overflow-hidden ">
           <img
             className="hidden object-cover w-full h-48 rounded-t-md md:block "
             src={image}
             alt={altDescription}
           />
-        </a>
+        </button>
 
         <div className="p-4 rounded-br-md rounded-bl-md">
           {/* Title */}
@@ -67,8 +66,9 @@ export const SmallProjectCard = ({
           onClose={toggleModal}
           title={title}
           description={description}
-          img={image}
+          screenshots={screenshots}
           stack={stack}
+          codeLink={codeLink}
         />
       </Modal>
     </>

@@ -14,7 +14,7 @@ export const TranscriptModal = ({ script, isOpen, onClose }) => {
     <Modal open={isOpen}>
       <div className="container rounded-md bg-primary min-h-[100vh] min-w-[90vw] p-8 ">
         <h1 className="text-6xl text-center"> Transcript</h1>
-        <p className="font-sans p-8 text-xl mx-auto my-8 max-w-[50%] border rounded-md center">
+        <p className="font-workSans p-8 text-xl mx-auto my-8 max-w-[50%] border rounded-md center">
           {formatScript(script)}
         </p>
         <button

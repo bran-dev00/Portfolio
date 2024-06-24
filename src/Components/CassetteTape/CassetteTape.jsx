@@ -11,12 +11,11 @@ import { TranscriptModal } from "./TranscriptModal";
 
 export const CassetteTape = () => {
   const script = `Hi there, my name is Brandon and I'm a computer science graduate from Iowa State University. Thanks again for stopping by and I hope by listening to this you can get to know me a bit better.
-			 I have many interests in both computer science and outside of computer science. But for the time being I'm focusing more on improving my full stack development skills, I feel pretty comfortable working with, HTML, CSS, and Javascript as well as React and Node. I have worked with a few backend technologies before as well, working with the Springboot framework in java ,MySQL for relational databases and node to build REST API's. I 've also dabbled with C# and the .NET ecosystem, GraphQL, and MongoDB. But I feel like my frontend skills are a lot better than my backend skills at the moment.
-			 My time in university exposed me to many technologies and gave me a solid foundation of computer science principles such as OOP, Data Structures and Algorithms, Lower level processes like operating system schedulers and caches as well as just general problem solving practice. So now it's just a matter of putting everything together to build something that can be used by others. 
-			 Another area I still struggle a bit in the designing process, but its something I'm trying to learn more of because I personally care about the aesthetics but I'm not formally trained in UI or UX Design.
+			 I have many interests in both computer science and outside of computer science. But for the time being I'm focusing more on improving my full stack development skills, I feel pretty comfortable working with, HTML, CSS, and Javascript as well as React and Node.
+       I have worked with a few backend technologies before as well, working with the Springboot framework in Java ,MySQL for relational databases and node to build REST API's. I 've also dabbled with C# and the .NET ecosystem, GraphQL, and MongoDB. But I feel like my frontend skills are a little bit better than my backend skills at the moment.
+			 My time in university exposed me to many technologies and gave me a solid foundation of computer science principles such as Object Oriented Programming, Data Structures and Algorithms, Lower level processes like operating system schedulers and caches as well as just general problem solving practice.
+			 
 			 Apart from software engineering, I have a big interest in music, I've been playing guitar for about 5 years now, and I've also been teaching myself digital music production. So I have been dabbling and researching more about audio programming and how to create my own VST's and digital instruments. 
-
-			 I also enjoy learning new languages, I'm fluent in both English and Spanish, I studied French and Portuguese in university and they were fairly easy to pickup because of my background in Spanish, and While I haven't practiced those in a while I don't think it would take me too long to pick them back up. And I am currently learning Japanese and can speak at a somewhat conversational level.
 			 
 			 I've been playing computer games since I was in grade school and so naturally I was curious about making games. In fact Computer Games was definitely one of the biggest contributing factors when I chose to study computer science.
 			
@@ -24,7 +23,7 @@ export const CassetteTape = () => {
 			 Anyways I just wanted to say thanks one more time for taking the time to listen to me and hope you have a great rest of your day. `;
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
-  const [duration, setDuration] = useState(167);
+  const [duration, setDuration] = useState(0);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -189,7 +188,7 @@ export const CassetteTape = () => {
             {/* Current Time  */}
             <div className="text-center">
               {formatTime(currentTime)}/{" "}
-              {duration ? formatTime(duration) : `02:47`}
+              {duration ? formatTime(duration) : `02:05`}
             </div>
           </div>
 

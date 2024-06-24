@@ -67,6 +67,7 @@ function App() {
                 finished={javaProject.finished}
                 stack={javaProject.stack}
                 description={javaProject.description}
+                codeLink={javaProject.codeLink}
               />
               <SmallProjectCard
                 finished={pokemonProject.finished}
@@ -74,6 +75,7 @@ function App() {
                 image={pokemonProject.image}
                 stack={pokemonProject.stack}
                 description={pokemonProject.description}
+                codeLink={pokemonProject.codeLink}
               />
               <SmallProjectCard
                 image={reactProject.image}
@@ -81,6 +83,8 @@ function App() {
                 finished={reactProject.finished}
                 stack={reactProject.stack}
                 description={reactProject.description}
+                screenshots={reactProject.screenshots}
+                codeLink={reactProject.codeLink}
               />
 
               <p className="p-4 text-sm font-bold block max-w-[100vw]   sm:text-xl  text-secondaryAccent lg:absolute lg:bottom-2 lg:right-10 ">
@@ -109,7 +113,7 @@ function App() {
                     src={GradPicture}
                     alt="My Graduation Picture"
                   />
-                  <p className="px-8 font-sans font-bold text-white md:text-lg xl:text-xl">
+                  <p className="px-8 text-white font-workSans md:text-lg xl:text-xl">
                     Hi, My name is Brandon, I'm a new computer science graduate
                     from Iowa State University, and I'm eager to finally get
                     started working in a professional setting. <br /> <br />I

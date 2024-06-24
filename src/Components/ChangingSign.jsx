@@ -1,23 +1,16 @@
 import { useEffect, useState } from "react";
 
 export const ChangingSign = () => {
-  const [interestText, setInterestText] = useState("Audio Programming");
+  const [interestText, setInterestText] = useState("Music");
   const [index, setIndex] = useState(0);
-
-  const interests = [
-    "Audio Programming",
-    "Music",
-    "Game Development",
-    "Art",
-    "Much Much More!",
-  ];
+  const interests = ["Music", "Art", "Much Much More!"];
 
   const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
   let changeText = () => {
-    scramble();
     index + 1 >= interests.length ? setIndex(0) : setIndex(index + 1);
     setInterestText(interests[index]);
+    scramble();
   };
 
   let scramble = () => {
