@@ -19,7 +19,7 @@ export const CassetteTape = () => {
 			 
 			 I've been playing computer games since I was in grade school and so naturally I was curious about making games. In fact Computer Games was definitely one of the biggest contributing factors when I chose to study computer science.
 			
-			 I still have so much to learn and so many things I want to build. But at the end of the day I just want to contribute and make cool things both for myself and for others.
+			 I still have so much to learn and so many things I want to bu  ild. But at the end of the day I just want to contribute and make cool things both for myself and for others.
 			 Anyways I just wanted to say thanks one more time for taking the time to listen to me and hope you have a great rest of your day. `;
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
@@ -160,7 +160,7 @@ export const CassetteTape = () => {
             onClose={toggleModal}
             script={script}
           />
-          <div className="flex flex-col items-center justify-center p-2 my-4 rounded-md">
+          <div className="flex flex-col items-center justify-center my-4 rounded-md sm:p-2">
             {/* Progress Bar */}
             <div>
               {/* <label htmlFor="progressBar">Seek:</label> */}
@@ -173,17 +173,6 @@ export const CassetteTape = () => {
                 onChange={changeProgressWidth}
               />
             </div>
-
-            {/* Volume Slider? */}
-            {/* <div>
-            <label htmlFor="volume">Volume </label>
-            <input
-              name="volume"
-              type="range"
-              onChange={handleChangeVolume}
-              ref={volumeBarRef}
-            />
-          </div> */}
 
             {/* Current Time  */}
             <div className="text-center">

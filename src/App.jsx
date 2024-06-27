@@ -1,9 +1,8 @@
 import { Navbar } from "./Components/Navbar/Navbar";
-import { useState } from "react";
 import HeroPicture from "./assets/SkillsHoneyComb.png";
 import GradPicture from "./assets/GraduationPicture.png";
 import Footer from "./Components/Footer/Footer";
-import { Socials } from "./Components/socials";
+import { Socials } from "./Components/Socials";
 import { SmallProjectCard } from "./Components/ProjectCard/SmallProjectCard";
 import { CassetteTape } from "./Components/CassetteTape/CassetteTape";
 import { ContactMe } from "./Components/ContactMe/ContactMe";
@@ -14,11 +13,12 @@ import { ChangingSign } from "./Components/ChangingSign";
 function App() {
   return (
     <>
-      <div className="relative text-white bg-background scroll-smooth">
+      <div className="relative text-white bg-background !scroll-smooth">
         <Navbar />
         <Socials />
 
         <div className="container p-4 mx-auto border-none sm:border-red-500 md:border-green-500 lg:border-blue-500 xl:border-purple-500 sm:px-6 lg:px-16">
+          {/* Header Section */}
           <header className="flex border items-center p-4 mb-16 font-inria sm:gap-x-4 md:gap-x-5 xl:gap-x-40 lg:h-[80vh]">
             {/* Left Text */}
 
@@ -50,6 +50,7 @@ function App() {
             />
           </header>
 
+          {/* Project Section */}
           <section className="my-16 text-lg text-white font-inria ">
             <h1
               id="project-section"
@@ -60,7 +61,7 @@ function App() {
 
             {/* Project Grid */}
 
-            <div className="relative flex flex-col items-center justify-center px-2 py-8 my-8 overflow-auto rounded-md mx- auto md:pb-16 sm:border lg:placeitemsce sm:place-items-center sm:grid place-items-start md:grid-cols-2 xl:grid-cols-3 lg:grid-cols-2 lg:place-items-center ">
+            <div className="relative flex flex-col flex-wrap items-center justify-center px-2 py-8 my-8 overflow-auto rounded-md mx- auto md:pb-16 sm: lg:placeitemsce sm:place-items-center sm:grid place-items-start md:grid-cols-2 xl:grid-cols-3 lg:grid-cols-2 lg:place-items-center ">
               <SmallProjectCard
                 image={javaProject.image}
                 title={javaProject.title}
@@ -69,6 +70,7 @@ function App() {
                 description={javaProject.description}
                 codeLink={javaProject.codeLink}
               />
+
               <SmallProjectCard
                 finished={pokemonProject.finished}
                 title={pokemonProject.title}
@@ -109,11 +111,11 @@ function App() {
                 {/* Fix Dimensions */}
                 <div className="flex flex-col items-center p-8 bg-secondaryRed/90 sm:rounded-r-none sm:rounded-t-md md:rounded-l-md md:rounded-tr-none ">
                   <img
-                    className="object-contain max-w-[500px] max-h-[300px] mb-8"
+                    className="object-contain max-w-[200px] max-h-[300px] sm:max-w-[500px] sm:max-h-[300px] mb-8"
                     src={GradPicture}
                     alt="My Graduation Picture"
                   />
-                  <p className="px-8 text-white font-workSans md:text-lg xl:text-xl">
+                  <p className="text-white sm:px-8 font-workSans md:text-lg xl:text-xl">
                     Hi, My name is Brandon, I'm a new computer science graduate
                     from Iowa State University, and I'm eager to finally get
                     started working in a professional setting. <br /> <br />I
@@ -131,13 +133,14 @@ function App() {
                   </p>
                 </div>
 
-                <div className="hidden sm:block">
+                <div className="hidden xs:block">
                   <CassetteTape />
                 </div>
               </div>
             </div>
           </section>
 
+          {/* Contact Section */}
           <section id="contact-section" className="">
             <ContactMe />
           </section>

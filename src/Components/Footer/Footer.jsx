@@ -82,7 +82,7 @@ const Footer = () => {
               <a
                 className="p-4 cursor-pointer fa-xl"
                 onClick={() => {
-                  openInNewWindow("https://codepen.io/");
+                  openInNewWindow("https://codepen.io/M00se01");
                 }}
               >
                 <FontAwesomeIcon icon={faCodepen} />
