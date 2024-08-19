@@ -1,4 +1,4 @@
-# A personal portfolio website
+# My personal portfolio website
 
 ## Built with React and Tailwindcss
 
