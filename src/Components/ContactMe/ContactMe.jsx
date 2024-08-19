@@ -20,6 +20,8 @@ export const ContactMe = () => {
 
         <form
           action="submit"
+          method="POST"
+          data-netlify="true"
           onSubmit={handleSubmit}
           className="  text-black flex flex-col justify-center gap-4 p-4 mt-5 xl:w-[50%] w-[100%] sm:w-[90%] md:w-[90%] "
         >
@@ -29,21 +31,21 @@ export const ContactMe = () => {
             name="name"
             placeholder="Enter your name"
             className="p-4 border border-transparent rounded-md focus:outline-none focus:ring-2 focus:ring-accent"
-            required={true}
+            required="true"
           />
           <input
             className="p-4 border border-transparent rounded-md focus:outline-none focus:ring-2 focus:ring-accent"
             type="email"
             name="email"
             placeholder="Enter your email"
-            required={true}
+            required="true"
           />
 
           <textarea
             name="message"
             className="h-40 p-4 border border-transparent rounded-md focus:outline-none focus:ring-2 focus:ring-accent"
             placeholder="Write your message here..."
-            required={true}
+            required="true"
           ></textarea>
           <button
             type="submit"
