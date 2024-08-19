@@ -39,7 +39,10 @@ function App() {
                 Full-Stack Development and
               </h3>
 
-              <ChangingSign />
+              {/* <ChangingSign /> */}
+              <span className="block p-4 my-5 text-sm font-bold text-center text-black rounded-md bg-accent xl:text-3xl lg:text-xl md:text-lg sm:text-md">
+                Much Much More!
+              </span>
             </div>
 
             {/* Right Image */}
