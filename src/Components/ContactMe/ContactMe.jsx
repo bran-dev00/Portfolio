@@ -1,8 +1,4 @@
 export const ContactMe = () => {
-  const handleSubmit = () => {
-    console.log("Form was submitted");
-  };
-
   return (
     <div>
       <div className="container flex flex-col items-center justify-center p-8 mx-auto my-8 text-black rounded-lg ">
@@ -15,13 +11,14 @@ export const ContactMe = () => {
         </h2>
 
         <form
-          method="POST"
           name="contact"
+          method="post"
           data-netlify="true"
           netlify-honeypot="bot-field"
-          onSubmit={handleSubmit}
+          onSubmit="submit"
           className="  text-black flex flex-col justify-center gap-4 p-4 mt-5 xl:w-[50%] w-[100%] sm:w-[90%] md:w-[90%] "
         >
+          <input type="hidden" name="form-name" value="contact form"></input>
           <p className="hidden">
             <label>
               Don’t fill this out if you’re human: <input name="bot-field" />
