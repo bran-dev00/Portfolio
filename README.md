@@ -1,3 +1,5 @@
-# This Portfolio is still a work in progress
+# A personal portfolio website
 
-But you can take a look at the source code I have so far if you'd like.
+## Built with React and Tailwindcss
+
+I'ts a little messy but feel free to look at the code
