@@ -28,9 +28,9 @@ export const ImageCarousel = ({ items }) => {
   return (
     <div className="relative px-8">
       {/* Content */}
-      <div className="flex flex-col items-center justify-center rounded-md p-8 mx-2 ">
+      <div className="flex flex-col items-center justify-center p-8 mx-2 rounded-md ">
         <img
-          className="w-[400px] h-[300px]"
+          className="rounded-lg "
           src={items[currentIndex]}
           alt="Screenshot"
         />

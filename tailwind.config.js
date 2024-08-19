@@ -1,9 +1,14 @@
 import { transformWithEsbuild } from "vite";
-
+const defaultTheme = require("tailwindcss/defaultTheme");
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+
   theme: {
+    screens: {
+      xs: "425px",
+      ...defaultTheme.screens,
+    },
     extend: {
       colors: {
         text: "#ebf6f0",
@@ -18,6 +23,7 @@ export default {
       fontFamily: {
         inria: ["inria", "serif"],
         poppins: ["Poppins", "Sans-Serif"],
+        workSans: ["workSans"],
       },
       animation: {
         showProjectTab: "showProjectTab 650ms ",

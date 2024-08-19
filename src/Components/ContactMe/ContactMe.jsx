@@ -9,30 +9,30 @@ export const ContactMe = () => {
 
   return (
     <div>
-      <div className=" text-black bg-secondary/30 p-8 my-8 h-[700px] rounded-lg ">
-        <h1 className="text-4xl text-white font-bold text-center">
+      <div className="container flex flex-col items-center justify-center p-8 mx-auto my-8 text-black rounded-lg ">
+        <h1 className="font-[Indria] text-5xl font-bold text-center text-white lg:text-6xl sm:text-4xl">
           Get in touch with me
         </h1>
 
-        <h2 className="text-accent text-center text-3xl my-8 font-bold">
-          Thanks for taking the time to reach out!
+        <h2 className="text-3xl font-bold text-center text-accent">
+          Thanks again for visiting!
         </h2>
 
         <form
           action="submit"
           onSubmit={handleSubmit}
-          className=" max-h-[500px] min-w-[800px] text-black flex flex-col justify-center gap-4 p-8 my-4"
+          className="  text-black flex flex-col justify-center gap-4 p-4 mt-5 xl:w-[50%] w-[100%] sm:w-[90%] md:w-[90%] "
         >
           <input type="checkbox" name="botcheck" className="hidden"></input>
           <input
             type="text"
             name="name"
             placeholder="Enter your name"
-            className="p-4 rounded-md focus:outline-none border border-transparent focus:ring-2 focus:ring-accent"
+            className="p-4 border border-transparent rounded-md focus:outline-none focus:ring-2 focus:ring-accent"
             required={true}
           />
           <input
-            className="p-4 rounded-md focus:outline-none border border-transparent focus:ring-2 focus:ring-accent"
+            className="p-4 border border-transparent rounded-md focus:outline-none focus:ring-2 focus:ring-accent"
             type="email"
             name="email"
             placeholder="Enter your email"
@@ -41,13 +41,13 @@ export const ContactMe = () => {
 
           <textarea
             name="message"
-            className="h-40 rounded-md p-4 focus:outline-none border border-transparent focus:ring-2 focus:ring-accent"
+            className="h-40 p-4 border border-transparent rounded-md focus:outline-none focus:ring-2 focus:ring-accent"
             placeholder="Write your message here..."
             required={true}
           ></textarea>
           <button
             type="submit"
-            className=" bg-accent p-3 rounded-xl text-black font-bold"
+            className="p-3 font-bold text-black bg-accent rounded-xl"
           >
             Submit
           </button>

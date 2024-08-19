@@ -6,21 +6,39 @@ import {
   faCodepen,
 } from "@fortawesome/free-brands-svg-icons";
 
+const openInNewWindow = (url) => {
+  window.open(url, "_blank", "noreferrer");
+};
+
 export const Socials = () => {
   return (
-    <div className="flex flex-col justify-center place-items-center gap-5 fixed bottom-10 left-10">
-      <a className="fa-xl" href="#">
+    <div className="fixed z-10 flex-col justify-center hidden gap-5 md:flex place-items-center xl:left-10 lg:left-5 md:left-3 bottom-10 left-10">
+      <button
+        className="fa-xl"
+        onClick={() => {
+          openInNewWindow(
+            "https://www.linkedin.com/in/brandon-chavez-933987230"
+          );
+        }}
+      >
         <FontAwesomeIcon icon={faLinkedin} />
-      </a>
-      <a className="fa-xl" href="#">
+      </button>
+      <button
+        className="fa-xl"
+        onClick={() => {
+          openInNewWindow("https://github.com/m00se01");
+        }}
+      >
         <FontAwesomeIcon icon={faGithub} />
-      </a>
-      <a className="fa-xl" href="#">
+      </button>
+      <button
+        className="fa-xl"
+        onClick={() => {
+          openInNewWindow("https://codepen.io/M00se01");
+        }}
+      >
         <FontAwesomeIcon icon={faCodepen} />
-      </a>
-      <a className="fa-xl" href="#">
-        <FontAwesomeIcon icon={faEnvelope} />
-      </a>
+      </button>
     </div>
   );
 };
