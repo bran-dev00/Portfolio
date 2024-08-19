@@ -17,8 +17,6 @@ const ProjectDetails = ({
     window.open(url, "_blank", "noreferrer");
   };
 
-  console.log(description);
-
   const formatDescription = (desc) => {
     return description?.split("\n").map((line, index) => (
       <p key={index}>

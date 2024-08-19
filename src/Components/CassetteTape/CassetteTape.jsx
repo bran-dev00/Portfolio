@@ -81,7 +81,7 @@ export const CassetteTape = () => {
     } else {
       audioElem.current.volume += 0.1;
     }
-    console.log("up");
+    // console.log("up");
   };
   const handleVolumeDown = () => {
     if (audioElem.current.volume <= 0) {
@@ -89,25 +89,25 @@ export const CassetteTape = () => {
     } else {
       audioElem.current.volume -= 0.1;
     }
-    console.log("down");
+    // console.log("down");
   };
 
   const handlePlay = () => {
-    console.log("play button clicked");
+    // console.log("play button clicked");
     setIsPlaying(true);
     audioElem.current.play();
     animationRef.current = requestAnimationFrame(whilePlaying);
   };
 
   const handlePause = () => {
-    console.log("pause button clicked");
+    // console.log("pause button clicked");
     setIsPlaying(false);
     audioElem.current.pause();
     cancelAnimationFrame(animationRef.current);
   };
 
   const handleStop = () => {
-    console.log("stop button clicked");
+    // console.log("stop button clicked");
     setIsPlaying(false);
     audioElem.current.pause();
     audioElem.current.currentTime = 0;
