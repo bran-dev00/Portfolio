@@ -9,7 +9,7 @@ import { ContactMe } from "./Components/ContactMe/ContactMe";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faKeyboard } from "@fortawesome/free-solid-svg-icons";
 import { javaProject, reactProject, pokemonProject } from "./projects";
-import { ChangingSign } from "./Components/ChangingSign";
+
 function App() {
   return (
     <>

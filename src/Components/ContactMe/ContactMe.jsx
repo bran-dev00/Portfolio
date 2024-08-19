@@ -1,10 +1,6 @@
-import { useState } from "react";
-
 export const ContactMe = () => {
-  const [result, setResult] = useState("");
-
   const handleSubmit = () => {
-    console.log("submit");
+    console.log("Form was submitted");
   };
 
   return (
@@ -21,11 +17,17 @@ export const ContactMe = () => {
         <form
           action="submit"
           method="POST"
+          name="contact"
           data-netlify="true"
+          netlify-honeypot="bot-field"
           onSubmit={handleSubmit}
           className="  text-black flex flex-col justify-center gap-4 p-4 mt-5 xl:w-[50%] w-[100%] sm:w-[90%] md:w-[90%] "
         >
-          <input type="checkbox" name="botcheck" className="hidden"></input>
+          <p className="hidden">
+            <label>
+              Don’t fill this out if you’re human: <input name="bot-field" />
+            </label>
+          </p>
           <input
             type="text"
             name="name"

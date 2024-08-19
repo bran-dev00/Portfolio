@@ -1,7 +1,5 @@
 import Disassembler from "./assets/disassembler.png";
 import screenshot_1 from "./assets/steam_roll_1.png";
-import screenshot_2 from "./assets/steam_roll_2.png";
-import screenshot_3 from "./assets/steam_roll_3.png";
 import pokemonAscii from "./assets/ascii_pokemon.jpg";
 
 export const javaProject = {
