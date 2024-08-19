@@ -16,7 +16,7 @@ export const ContactMe = () => {
         </h2>
 
         <form
-          name="contact form"
+          name="contact"
           method="POST"
           data-netlify="true"
           netlify-honeypot="bot-field"
@@ -24,7 +24,7 @@ export const ContactMe = () => {
           netlify
           className="text-black flex flex-col justify-center gap-4 p-4 mt-5 xl:w-[50%] w-[100%] sm:w-[90%] md:w-[90%]"
         >
-          <input type="hidden" name="form-name" value="contact form"></input>
+          <input type="hidden" name="form-name" value="contact"></input>
 
           <p className="hidden">
             <label>
