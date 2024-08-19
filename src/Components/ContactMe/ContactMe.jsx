@@ -1,9 +1,4 @@
 export const ContactMe = () => {
-  // const handleSubmit = (event) => {
-  //   event.preventDefault();
-  //   event.target.submit();
-  // };
-
   return (
     <div>
       <div className="container flex flex-col items-center justify-center p-8 mx-auto my-8 text-black rounded-lg ">
@@ -17,11 +12,7 @@ export const ContactMe = () => {
 
         <form
           name="contact"
-          method="POST"
-          data-netlify="true"
-          netlify-honeypot="bot-field"
-          onSubmit="submit"
-          netlify
+          method="post"
           className="text-black flex flex-col justify-center gap-4 p-4 mt-5 xl:w-[50%] w-[100%] sm:w-[90%] md:w-[90%]"
         >
           <input type="hidden" name="form-name" value="contact"></input>
@@ -42,7 +33,7 @@ export const ContactMe = () => {
               id="name"
               placeholder="Enter your name"
               className="p-4 border border-transparent rounded-md focus:outline-none focus:ring-2 focus:ring-accent"
-              required={true}
+              required
             />
           </div>
 
@@ -56,7 +47,7 @@ export const ContactMe = () => {
               name="email"
               id="email"
               placeholder="Enter your email"
-              required={true}
+              required
             />
           </div>
 
@@ -69,7 +60,7 @@ export const ContactMe = () => {
               id="message"
               className="h-40 p-4 border border-transparent rounded-md focus:outline-none focus:ring-2 focus:ring-accent"
               placeholder="Write your message here..."
-              required={true}
+              required
             ></textarea>
           </div>
           <button
