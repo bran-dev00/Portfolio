@@ -16,7 +16,7 @@ const Footer = () => {
         <div>
           <h3 className="my-4 font-bold text-white">Brandon Chavez</h3>
           <p>My personal portfolio</p>
-          <span className="py-8"> Brandon &copy; 2024</span>
+          <span className="py-8"> Brandon &copy; 2025</span>
         </div>
 
         <div>
@@ -72,7 +72,7 @@ const Footer = () => {
               <a
                 className="p-4 cursor-pointer fa-xl "
                 onClick={() => {
-                  openInNewWindow("https://github.com/m00se01");
+                  openInNewWindow("https://github.com/bran-dev00");
                 }}
               >
                 <FontAwesomeIcon icon={faGithub} />

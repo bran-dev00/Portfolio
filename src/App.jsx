@@ -65,6 +65,7 @@ function App() {
             {/* Project Grid */}
 
             <div className="relative flex flex-col flex-wrap items-center justify-center px-2 py-8 my-8 overflow-auto rounded-md mx- auto md:pb-16 sm: lg:placeitemsce sm:place-items-center sm:grid place-items-start md:grid-cols-2 xl:grid-cols-3 lg:grid-cols-2 lg:place-items-center ">
+              {/* Could probably clean this up with a map function, handle missing params*/}
               <SmallProjectCard
                 image={javaProject.image}
                 title={javaProject.title}
