@@ -26,7 +26,7 @@ export const Socials = () => {
       <button
         className="fa-xl"
         onClick={() => {
-          openInNewWindow("https://github.com/m00se01");
+          openInNewWindow("https://github.com/bran-dev00");
         }}
       >
         <FontAwesomeIcon icon={faGithub} />
